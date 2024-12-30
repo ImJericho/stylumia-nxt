@@ -99,3 +99,8 @@ Fashion Ontology
 	•	Imported
 	•	Body Type
 	•	Concept
+
+
+Product Name  (=Node)
+Properties:
+	k,v (value=Node) (key=relation)
