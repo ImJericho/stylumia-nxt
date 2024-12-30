@@ -1,4 +1,4 @@
-*.txt
+
 .env
 .venv/
 *.__pycache__/
