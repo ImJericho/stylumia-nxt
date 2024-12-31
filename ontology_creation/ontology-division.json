@@ -1,6 +1,0 @@
-{
-    "superclass": "This category is fixed and will not change. It includes clothing, footwear, accessories, and decorations (all non-human wearable fashion items).",
-    "subclass": "{why} This defines the purpose of the product, such as traditional wear, western wear, casual wear, etc.",
-    "subsubclass": "{where} This defines the category the product belongs to, such as top-wear, bottom-wear, wall-art, etc.",
-    "category": "{what} This defines what the product is."
-}
