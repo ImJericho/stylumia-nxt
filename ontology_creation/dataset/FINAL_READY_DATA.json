@@ -1,0 +1,121 @@
+[
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "08d5952319c2efbb3c078eea151eff3b0b8b5fc3c1916d9bcc45285c7103cb78"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "21ef3db12707e7ea741237a0ceed41392608b9fb22f8aa81f902c69ca435de54"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Lace Maxi Dress",
+        "product_id": "99f85a4db13b4cad954ca548d864cf9b6bd6c93a3c3da92a9d2e80ea0dae988c"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "83496e92cca33cf9bc569b4c1b604ee10a1f35d09b7a8b8f414cc7acc57db018"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "western-wear",
+        "subsubclass": "top-wear",
+        "category": "Bandeau Dress",
+        "product_id": "3248f4276dcb3d65f07e85619a8113ae5ef87800d633bfc299f7dcbe7aa74ac8"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "One-shoulder Dress",
+        "product_id": "342c8304257849e96c66c488cf8c0e50c23c896e7599c2a7117a4572d031dec0"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "formal wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "0f747be10a2e4190552f42ef7a7840f64533ac8226879b2137d5f54e9a183c80"
+    },
+    {
+        "Common generic name": "Dress",
+        "Description": "Olive green, Solid colour",
+        "Sleeve Length": "Sleeveless",
+        "Neckline": "V-neck",
+        "Size": "XS :- Width: 91 cm, Length: 97 cm, S :- Width: 99 cm, Length: 98 cm, M :- Width: 1.07 m, Length: 99 cm, L :- Width: 1.15 m, Length: 1.01 m, XL :- Width: 1.25 m, Length: 1.02 m",
+        "Fit": "Regular fit",
+        "Style": "Plunge back",
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "052597a7450de72f3e2a178a1a4147c7ed00674815d3180a2c582457457cd139"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Dress",
+        "product_id": "f39acf8a64ccaf44410050142e9db99661a9ceb4125c8f6252b16b06d23e0026"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Bandeau Dress",
+        "product_id": "0127771e57530aa7c07b7b8a609cdba93521f495738e4172c891aff057ba6899"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Balloon-sleeved dress",
+        "product_id": "071a11f127be28cd3d80b8ed0868773e647e20fb34abb74e1c2667665005a3cb"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "western-wear",
+        "subsubclass": "top-wear",
+        "category": "Bodycon dress",
+        "product_id": "55df6af26eddb92032ac96ed005ad609c85bd48e1bb77716902193fc5a624149"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "formal wear",
+        "subsubclass": "top-wear",
+        "category": "Blazer",
+        "product_id": "8882958fa6a6300ee58d8477cceb123518ac0d013b85cde763a8c979b383f7ed"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "formal wear",
+        "subsubclass": "top-wear",
+        "category": "Strappy midi dress",
+        "product_id": "c24708ef270ec8756a7818737a2be4333a153d0cff1f47d611d749ff752abaf5"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "casual wear",
+        "subsubclass": "top-wear",
+        "category": "Sequined bandeau dress",
+        "product_id": "111b1938704f8477c05728e45d8fa4caada1da93537c02a876eb577de1885e03"
+    },
+    {
+        "superclass": "clothing",
+        "subclass": "formal wear",
+        "subsubclass": "top-wear",
+        "category": "Blazer",
+        "product_id": "39f7310f75804c22f812310341e27584d212f45e788e254fd57cc05a69bc0348"
+    }
+]
