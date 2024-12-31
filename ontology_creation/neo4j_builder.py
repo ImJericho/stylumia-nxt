@@ -117,7 +117,7 @@ def create_nodes_main():
     
 def create_releationships_main():
     data = lo.read_json("ontology.json")
-    conn = Neo4jConnection(uri="neo4j+s://9af3a233.databases.neo4j.io", user="neo4j", pwd="qvAvMXmTz4QXr3Q64ZVy9ZFYqBMWKTBBV2ejkXGhn5I")
+    conn = Neo4jConnection(uri=os.getenv('NEO4J_URI'), user=os.getenv('neo4j'), pwd=os.getenv('NEO4J_PASSWORD'))
     for superclass in data.get("superclass", []):
         print(f"Superclass: {superclass['name']}")
         merge_create_nodes(conn, "superclass", [{"name": superclass['name']}])
