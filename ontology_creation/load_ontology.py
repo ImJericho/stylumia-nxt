@@ -101,7 +101,9 @@ def get_ontology_dict(data):
 
     return ontology
 
-
+def get_class_defination(class_name):
+    json_obj = json.load(open('ontology_definations.json'))
+    return json_obj[class_name]
 
 if __name__ == "__main__":
     # json_obj = read_json('ontology.json')

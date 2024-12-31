@@ -36,16 +36,18 @@ def prepare_dataset_for_llm(path):
     feature_list: {feature_list}
     '''
 
-    data = []
-    wasted = 0
-    total = 0
+
 
     for filename in os.listdir(path):
         if filename.endswith('.csv'):
+            data = []
+            wasted = 0
+            total = 0
+            i = 0
+            update_ontology = False
             print(f"Processing {filename}")
             df = pd.read_csv(f'{path}/{filename}')
             total_rows = len(df)
-            total += total_rows
             for index, row in df.iterrows():
                 product_name = row['product_name']
                 description = row['description']
@@ -54,25 +56,40 @@ def prepare_dataset_for_llm(path):
                 prompt = prompt_input.format(product_name=product_name, description=description, meta_info=meta_info, feature_list=feature_list)
                 
                 ontology = json.load(open('ontology_dict.json'))
-
-                # print(ontology['superclasses'])
-                # _, superclass = cls.get_class_from_text_using_ollama(prompt, ontology['superclasses'])
-                # print(superclass)
-                # print(superclass[superclass]['subclasses'])
-                # _, subclass = cls.get_class_from_text_using_ollama(prompt, superclass[superclass]['subclasses'])
-                # print(subclass[superclass][subclass]['subsubclasses'])
-                # _, subsubclass = cls.get_class_from_text_using_ollama(prompt, subclass[superclass][subclass]['subsubclasses'])
-                # print(subsubclass[superclass][subclass][subsubclass]['category'])
-                # _, category = cls.get_class_from_text_using_ollama(prompt, subsubclass[superclass][subclass][subsubclass]['category'])
-
                 try:
-                    a, superclass = cls.get_class_from_text_using_ollama(prompt, ontology['superclasses'], debug=False)
-                    b, subclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass]['subclasses'], debug=False)
-                    c, subsubclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass]['subsubclasses'], debug=False)
-                    d, category = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass][subsubclass]['categories'], debug=False)
+                    debug = False
+                    a, superclass = cls.get_class_from_text_using_ollama(prompt, ontology['superclasses'], lo.get_class_defination('superclass'), debug=debug)
+                    b, subclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass]['subclasses'], lo.get_class_defination('subclass'), debug=debug)
+                    c, subsubclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass]['subsubclasses'], lo.get_class_defination('subsubclass'), debug=debug)
+                    d, category = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass][subsubclass]['categories'], lo.get_class_defination('category'), debug=debug)
                     
-                    # if a or b or c or d:
-                    #     raise Exception("Error classifing found new class")
+                    if a:
+                        ontology['superclasses'].append(superclass)
+                        ontology[superclass]['subclasses'].append(subclass)
+                        ontology[superclass][subclass]['subsubclasses'].append(subsubclass)
+                        ontology[superclass][subclass][subsubclass]['categories'].append(category)
+                        update_ontology = True
+
+                    elif b:
+                        ontology[superclass]['subclasses'].append(subclass)
+                        ontology[superclass][subclass]['subsubclasses'].append(subsubclass)
+                        ontology[superclass][subclass][subsubclass]['categories'].append(category)
+                        update_ontology = True
+                    
+                    elif c:
+                        ontology[superclass][subclass]['subsubclasses'].append(subsubclass)
+                        ontology[superclass][subclass][subsubclass]['categories'].append(category)
+                        update_ontology = True
+                    
+                    elif d:
+                        ontology[superclass][subclass][subsubclass]['categories'].append(category)
+                        update_ontology = True
+                    
+                    if update_ontology:
+                        with open('ontology_dict.json', 'w') as f:
+                            print("Updating ontology")
+                            json.dump(ontology, f)
+
                 except:
                     print(f"Error classifing row {index + 1} of {total_rows} in {filename}")
                     wasted += 1
@@ -92,7 +109,7 @@ def prepare_dataset_for_llm(path):
 
                 properties = json.loads(row['style_attributes'])
                 # try:
-                #     properties = cls.get_filtered_properties_from_attribute(json.loads(row['style_attributes']), debug=False)
+                #     properties = cls.get_filtered_properties_from_attribute(json.loads(row['style_attributes']), debug=True)
                 # except:
                 #     print(f"Error filtering row {index + 1} of {total_rows} in {filename}")
                 #     wasted += 1
@@ -102,20 +119,21 @@ def prepare_dataset_for_llm(path):
                 combined_dict2 = {**combined_dict, **compulsory_properties}
                 data.append(combined_dict2)
                 
-                if index % 1 == 0:
+                if i % 1 == 0:
                     print(f"Processed row {index + 1} of {total_rows} in {filename}")
 
-                if index % 10 == 0:
-                    with open(f'dataset/FINAL_READY_DATA.json', 'w') as f:
-                        print("Saving chunk data")
+                if i % 10 == 0:
+                    with open(f'dataset/processed_json/FINAL_READY_DATA_{filename[:-4]}.json', 'w') as f:
+                        print("Saving another chunk data")
                         json.dump(data, f)
+                i+=1
     
-        print("Finished processing", filename)
-    print(f"Total wasted rows: {wasted} out of {total}")
-    print("\n\n")
-    print(f"Saving data to dataset/FINAL_READY_DATA.json")
-    with open(f'dataset/FINAL_READY_DATA.json', 'w') as f:
-        json.dump(data, f)
+            print("Finished processing", filename)
+            with open(f'dataset/processed_json/FINAL_READY_DATA_{filename[:-4]}.json', 'w') as f:
+                print("Saving another chunk data")
+                json.dump(data, f)
+
+            print(f"Total wasted rows: {wasted} out of {total}")
 
     return
 

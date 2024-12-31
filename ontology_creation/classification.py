@@ -35,21 +35,22 @@ def get_class_from_text_using_llm(text, class_list):
     
     return similarity_dict
 
-def get_class_from_text_using_ollama(datapoint, class_list, debug=False):
+def get_class_from_text_using_ollama(datapoint, class_list, class_defination, debug=False):
     prompt = (
-        "I have a fashion item described as follows: {msg}. "
-        "Based on this description, identify the most suitable class for the item from this list {class_list}. "
-        "If the item does not match any of the existing classes, feel free to assign a new class or indicate that it doesn't belong to any known category. "
-        "Your response should be contain only a JSON object nothing else with the key 'class' and the value as the determined class name (either from the provided list, a new class, or 'None' if no match is found)."
+        "You are tasked with classifying a fashion product based on the following description: {description}. "
+        "Select the most appropriate class for this item from the list: {class_list}. This list represents classifications based on the class defination as {class_defination}. "
+        "If the item does not fit any of the existing classes, generate a new class that best describes it, but remember if you are creating a new class then make sure it follows the class defination and it is generic to fit few other products in it. "
+        "Respond with a JSON object containing only the key 'class' and the value as the determined class (from the list, a newly generated class)."
     )
-    prompt = prompt.format(msg=datapoint, class_list=class_list)
+
+    prompt = prompt.format(description=datapoint, class_list=class_list, class_defination=class_defination)
     
 
     for i in range(10):
         response = llm_response(prompt)
-        # print(f"Attempt {i+1}, ({response})")
+        if debug:
+            print(f"Attempt {i+1}, ({response})")
         try:
-            # json_obj = json.loads(response)
             json_obj = lo.get_json_from_response(response)
             break
         except:
@@ -72,11 +73,12 @@ def get_filtered_properties_from_attribute(attribute_dict, debug=False):
     prompt = (
         "I have a fashion item with the following attributes: {attribute_list}. "
         "Based on this attribute, filter out the properties that are most likely to be associated to understanding the fashion ontology. "
-        "try to add atlist {num} properties including the name of product. "
-        "Your response should be contain only a python list object nothing else."
+        "try to add atleast {num} properties including the name of product. "
+        "Your response should be contain only a json list of strings nothing else."
     )
 
     attribute_list = list(attribute_dict.keys())
+    print(attribute_list)
 
     prompt = prompt.format(attribute_list=attribute_list, num=len(attribute_list)//2)
     props = []
