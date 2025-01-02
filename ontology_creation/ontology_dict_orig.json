@@ -210,3 +210,21 @@
         ]
     }
 }
+
+
+
+
+
+{
+    "superclass": "Fixed high-level divisions that categorize the broadest types of fashion products.",
+    "subclass": "Defines the purpose or cultural/functional intent of the product like (.",
+    "subsubclass": "Describes the part of the body or area the product is associated with.",
+    "category": "Represents the specific product name/type.",
+  
+    "examples": {
+        "superclass": ["Clothing", "Footwear", "Accessories", "Decorations"],
+        "subclass": ["Traditional Wear", "Casual Wear", "Formal Wear", "Western Wear"],
+        "subsubclass": ["Top-wear", "Bottom-wear", "Footwear", "Earring", "Wall Art"],
+        "category": ["Saree", "Kurti", "Sneakers", "Jeans", "Jewelry", "Wrist Watch"]
+      }
+  }
