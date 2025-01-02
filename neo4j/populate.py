@@ -7,29 +7,32 @@ from tqdm import tqdm
 import logging
 from transformers import pipeline
 import os
-from dotenv import load_dotenv 
+from dotenv import load_dotenv
 from tqdm import tqdm
-load_dotenv() 
+
+load_dotenv()
 from data import objects
+
 
 def getShortField(field):
     return field.replace(" ", "_")
 
+
 class FashionOntologySystem:
     def __init__(self, uri: str, user: str, password: str):
         """Initialize the Fashion Ontology System with Neo4j credentials."""
-        self.driver =  GraphDatabase.driver(uri, auth=(user, password))
+        self.driver = GraphDatabase.driver(uri, auth=(user, password))
         self.setup_logging()
-        
+
     def setup_logging(self):
         """Set up logging configuration."""
         logging.basicConfig(
             level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s',
+            format="%(asctime)s - %(levelname)s - %(message)s",
             handlers=[
-                logging.FileHandler('fashion_ontology.log'),
-                logging.StreamHandler()
-            ]
+                logging.FileHandler("fashion_ontology.log"),
+                logging.StreamHandler(),
+            ],
         )
         self.logger = logging.getLogger(__name__)
 
@@ -39,7 +42,7 @@ class FashionOntologySystem:
 
         with self.driver.session() as session:
             for obj in tqdm(objects):
-                try: 
+                try:
                     # Create Cypher query
                     query = """
                     MERGE (p:Product {product_id: $product_id})
@@ -60,31 +63,61 @@ class FashionOntologySystem:
 
                     # Add other relations if they exist
                     for key, value in obj.items():
-                        if key not in ['product name', 'sno', 'superclass', 'subclass', 'subsubclass', 'category']:
-                            query += f"""
-                            MERGE (a"""+getShortField(key)+":"+getShortField(key) +"{name: $"+getShortField(key)+"""}) 
-                            MERGE (p)-[:HAS]->(a"""+getShortField(key)+""")
+                        if key not in [
+                            "product name",
+                            "sno",
+                            "superclass",
+                            "subclass",
+                            "subsubclass",
+                            "category",
+                        ]:
+                            query += (
+                                f"""
+                            MERGE (a"""
+                                + getShortField(key)
+                                + ":"
+                                + getShortField(key)
+                                + "{name: $"
+                                + getShortField(key)
+                                + """}) 
+                            MERGE (p)-[:HAS]->(a"""
+                                + getShortField(key)
+                                + """)
                             """
+                            )
 
                     # Execute query
                     session.run(
                         query,
-                        product_id=obj['sno'],
-                        product_name=obj['product name'],
-                        superclass=obj['superclass'],
-                        subclass=obj['subclass'],
-                        subsubclass=obj['subsubclass'],
-                        category=obj['category'],
-                        **{getShortField(key): obj[key] for key in obj if key not in ['product name', 'sno', 'superclass', 'subclass', 'subsubclass', 'category']}
+                        product_id=obj["sno"],
+                        product_name=obj["product name"],
+                        superclass=obj["superclass"],
+                        subclass=obj["subclass"],
+                        subsubclass=obj["subsubclass"],
+                        category=obj["category"],
+                        **{
+                            getShortField(key): obj[key]
+                            for key in obj
+                            if key
+                            not in [
+                                "product name",
+                                "sno",
+                                "superclass",
+                                "subclass",
+                                "subsubclass",
+                                "category",
+                            ]
+                        },
                     )
-                    
 
                 except Exception as e:
                     self.logger.error(f"Error processing row: {obj['product name']}")
                     self.logger.error(str(e))
+
     def close(self):
         """Close the Neo4j connection."""
         self.driver.close()
+
 
 def main():
     URI = os.getenv("NEO4J_URI")
@@ -95,18 +128,19 @@ def main():
     DATADIR = os.path.join(DIR, "..", "data")
     # Initialize system
     system = FashionOntologySystem(URI, USER, PASSWORD)
-    
+
     try:
 
         DIR = os.path.dirname(os.path.abspath(__file__))
-        
+
         # Process each CSV file
         Objects = objects
-        
+
         system.load_data(Objects)
-            
+
     finally:
         system.close()
+
 
 if __name__ == "__main__":
     main()
