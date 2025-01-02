@@ -5,7 +5,6 @@ from neo4j import GraphDatabase
 import ast
 from tqdm import tqdm
 import logging
-from transformers import pipeline
 import os
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -63,29 +62,13 @@ class FashionOntologySystem:
 
                     # Add other relations if they exist
                     for key, value in obj.items():
-                        if key not in [
-                            "product name",
-                            "sno",
-                            "superclass",
-                            "subclass",
-                            "subsubclass",
-                            "category",
-                        ]:
-                            query += (
-                                f"""
-                            MERGE (a"""
-                                + getShortField(key)
-                                + ":"
-                                + getShortField(key)
-                                + "{name: $"
-                                + getShortField(key)
-                                + """}) 
-                            MERGE (p)-[:HAS]->(a"""
-                                + getShortField(key)
-                                + """)
+                        if key not in ['product name', 'sno', 'superclass', 'subclass', 'subsubclass', 'category']:
+                            fieldLabel = getShortField(key)
+                            relationLabel = "HAS_" + fieldLabel.upper()
+                            query += f"""
+                            MERGE (a"""+fieldLabel+":"+fieldLabel +"{name: $"+fieldLabel+"""}) 
+                            MERGE (p)-[:"""+relationLabel+"""]->(a"""+fieldLabel+""")
                             """
-                            )
-
                     # Execute query
                     session.run(
                         query,
