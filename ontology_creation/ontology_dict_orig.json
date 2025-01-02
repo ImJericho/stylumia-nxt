@@ -1,0 +1,212 @@
+{
+    "superclasses": [
+        "clothing",
+        "footwear",
+        "accessories",
+        "decoration"
+    ],
+    "clothing": {
+        "traditional wear": {
+            "top-wear": {
+                "categories": [
+                    "Sherwani"
+                ]
+            },
+            "bottom-wear": {
+                "categories": [
+                    "Dhoti"
+                ]
+            },
+            "others": {
+                "categories": [
+                    "Saree"
+                ]
+            },
+            "subsubclasses": [
+                "top-wear",
+                "bottom-wear",
+                "others"
+            ]
+        },
+        "western-wear": {
+            "top-wear": {
+                "categories": [
+                    "Shirt"
+                ]
+            },
+            "subsubclasses": [
+                "top-wear"
+            ]
+        },
+        "casual wear": {
+            "top-wear": {
+                "categories": [
+                    "TShirt"
+                ]
+            },
+            "subsubclasses": [
+                "top-wear"
+            ]
+        },
+        "formal wear": {
+            "top-wear": {
+                "categories": [
+                    "Blazer"
+                ]
+            },
+            "subsubclasses": [
+                "top-wear"
+            ]
+        },
+        "others": {
+            "top-wear": {
+                "categories": [
+                    "Hoodie"
+                ]
+            },
+            "subsubclasses": [
+                "top-wear"
+            ]
+        },
+        "subclasses": [
+            "traditional wear",
+            "western-wear",
+            "casual wear",
+            "formal wear",
+            "others"
+        ]
+    },
+    "footwear": {
+        "sports": {
+            "running": {
+                "categories": [
+                    "shoes"
+                ]
+            },
+            "subsubclasses": [
+                "running"
+            ]
+        },
+        "casual wear": {
+            "sneakers": {
+                "categories": [
+                    "shoes"
+                ]
+            },
+            "subsubclasses": [
+                "sneakers"
+            ]
+        },
+        "formal wear": {
+            "oxford": {
+                "categories": [
+                    "shoes"
+                ]
+            },
+            "subsubclasses": [
+                "oxford"
+            ]
+        },
+        "others": {
+            "flip-flops": {
+                "categories": [
+                    "shoes"
+                ]
+            },
+            "subsubclasses": [
+                "flip-flops"
+            ]
+        },
+        "traditional wear": {
+            "juttis": {
+                "categories": [
+                    "shoes"
+                ]
+            },
+            "subsubclasses": [
+                "juttis"
+            ]
+        },
+        "subclasses": [
+            "sports",
+            "casual wear",
+            "formal wear",
+            "others",
+            "traditional wear"
+        ]
+    },
+    "accessories": {
+        "timepiece": {
+            "hand": {
+                "categories": [
+                    "watch"
+                ]
+            },
+            "subsubclasses": [
+                "hand"
+            ]
+        },
+        "formal wear": {
+            "cloth": {
+                "categories": [
+                    "tiepin"
+                ]
+            },
+            "subsubclasses": [
+                "cloth"
+            ]
+        },
+        "jewellery": {
+            "earrings": {
+                "categories": [
+                    "hoops"
+                ]
+            },
+            "subsubclasses": [
+                "earrings"
+            ]
+        },
+        "subclasses": [
+            "timepiece",
+            "formal wear",
+            "jewellery"
+        ]
+    },
+    "decoration": {
+        "home decor": {
+            "wall decor": {
+                "categories": [
+                    "paintings"
+                ]
+            },
+            "subsubclasses": [
+                "wall decor"
+            ]
+        },
+        "kitchenware": {
+            "utensils": {
+                "categories": [
+                    "pots"
+                ]
+            },
+            "subsubclasses": [
+                "utensils"
+            ]
+        },
+        "furniture": {
+            "living room": {
+                "categories": [
+                    "sofa"
+                ]
+            },
+            "subsubclasses": [
+                "living room"
+            ]
+        },
+        "subclasses": [
+            "home decor",
+            "kitchenware",
+            "furniture"
+        ]
+    }
+}

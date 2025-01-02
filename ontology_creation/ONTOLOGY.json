@@ -1,0 +1,446 @@
+{
+	"superclass": [
+		{
+			"name": "clothing",
+			"subclass": [
+				{
+					"name": "traditional wear",
+					"subsubclass": [
+						{
+							"name": "top-wear",
+							"category": [
+								{
+									"name": "Sherwani",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_001",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "bottom-wear",
+							"category": [
+								{
+									"name": "Dhoti",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_002",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "others",
+							"category": [
+								{
+									"name": "Saree",
+									"properties": [
+										{
+											"name": "product name",
+											"id": "product_id_003",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "western-wear",
+					"subsubclass": [
+						{
+							"name": "top-wear",
+							"category": [
+								{
+									"name": "Shirt",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_004",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "casual wear",
+					"subsubclass": [
+						{
+							"name": "top-wear",
+							"category": [
+								{
+									"name": "TShirt",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_005",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "formal wear",
+					"subsubclass": [
+						{
+							"name": "top-wear",
+							"category": [
+								{
+									"name": "Blazer",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_006",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "others",
+					"subsubclass": [
+						{
+							"name": "top-wear",
+							"category": [
+								{
+									"name": "Hoodie",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_007",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "footwear",
+			"subclass": [
+				{
+					"name": "sports",
+					"subsubclass": [
+						{
+							"name": "running",
+							"category": [
+								{
+									"name": "shoes",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_008",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "casual wear",
+					"subsubclass": [
+						{
+							"name": "sneakers",
+							"category": [
+								{
+									"name": "shoes",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_009",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "formal wear",
+					"subsubclass": [
+						{
+							"name": "oxford",
+							"category": [
+								{
+									"name": "shoes",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_010",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "others",
+					"subsubclass": [
+						{
+							"name": "flip-flops",
+							"category": [
+								{
+									"name": "shoes",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_011",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "traditional wear",
+					"subsubclass": [
+						{
+							"name": "juttis",
+							"category": [
+								{
+									"name": "shoes",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_012",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "accessories",
+			"subclass": [
+				{
+					"name": "timepiece",
+					"subsubclass": [
+						{
+							"name": "hand",
+							"category": [
+								{
+									"name": "watch",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_013",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "formal wear",
+					"subsubclass": [
+						{
+							"name": "cloth",
+							"category": [
+								{
+									"name": "tiepin",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_014",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "jewellery",
+					"subsubclass": [
+						{
+							"name": "earrings",
+							"category": [
+								{
+									"name": "hoops",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_015",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "decoration",
+			"subclass": [
+				{
+					"name": "home decor",
+					"subsubclass": [
+						{
+							"name": "wall decor",
+							"category": [
+								{
+									"name": "paintings",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_016",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "kitchenware",
+					"subsubclass": [
+						{
+							"name": "utensils",
+							"category": [
+								{
+									"name": "pots",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_017",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "furniture",
+					"subsubclass": [
+						{
+							"name": "living room",
+							"category": [
+								{
+									"name": "sofa",
+									"product": [
+										{
+											"name": "product name",
+											"id": "product_id_018",
+											"brand": "brand name",
+											"price": "price",
+											"color": "color",
+											"size": "size",
+											"material": "material"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
