@@ -15,6 +15,10 @@ def llm_response(msg, model='phi3'):
 
     response: ChatResponse = chat(model=model, messages=[
         {
+        'role': 'system',
+        'content': 'You are a fashion expert who can only respond in json with only 1 key - class.',
+        },
+        {
             'role': 'user',
             'content': msg,
         },
@@ -67,6 +71,43 @@ def get_class_from_text_using_ollama(datapoint, class_list, class_defination, de
         print(f"Valid class: {json_obj['class']}")
     return False, json_obj['class']
 
+
+def get_closest_class(llm_class, class_list, debug=False):
+    """
+    Finds the closest class from the provided class_list to the LLM-suggested class using SentenceTransformer.
+    """
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+
+    # Encode the LLM-suggested class and the available class list
+    llm_embedding = model.encode(llm_class, convert_to_tensor=True)
+    class_embeddings = model.encode(class_list, convert_to_tensor=True)
+
+    # Compute cosine similarities
+    similarities = util.cos_sim(llm_embedding, class_embeddings)[0]
+
+    # Get the class with the highest similarity
+    max_index = similarities.argmax().item()
+    closest_class = class_list[max_index]
+    
+    if debug:
+        print(f"LLM Class: {llm_class}")
+        print(f"Closest Class: {closest_class}")
+        print(f"Similarity Scores: {similarities.tolist()}")
+
+    return closest_class
+
+def get_class_from_text_using_ollama_with_approximation(datapoint, class_list, class_defination, debug=False):
+    """
+    Similar to get_class_from_text_using_ollama, but ensures that the returned class is always in the provided class list.
+    """
+    is_new_class, llm_class = get_class_from_text_using_ollama(datapoint, class_list, class_defination, debug=debug)
+
+    if is_new_class:
+        # Approximate the closest class from the list if the LLM-suggested class is not in the list
+        closest_class = get_closest_class(llm_class, class_list, debug=debug)
+        return False, closest_class
+
+    return False, llm_class
 
 def get_filtered_properties_from_attribute(attribute_dict, debug=False):
 

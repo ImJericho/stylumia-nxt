@@ -58,10 +58,10 @@ def prepare_dataset_for_llm(path):
                 ontology = json.load(open('ontology_dict.json'))
                 try:
                     debug = False
-                    a, superclass = cls.get_class_from_text_using_ollama(prompt, ontology['superclasses'], lo.get_class_defination('superclass'), debug=debug)
-                    b, subclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass]['subclasses'], lo.get_class_defination('subclass'), debug=debug)
-                    c, subsubclass = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass]['subsubclasses'], lo.get_class_defination('subsubclass'), debug=debug)
-                    d, category = cls.get_class_from_text_using_ollama(prompt, ontology[superclass][subclass][subsubclass]['categories'], lo.get_class_defination('category'), debug=debug)
+                    a, superclass = cls.get_class_from_text_using_ollama_with_approximation(prompt, ontology['superclasses'], lo.get_class_defination('superclass'), debug=debug)
+                    b, subclass = cls.get_class_from_text_using_ollama_with_approximation(prompt, ontology[superclass]['subclasses'], lo.get_class_defination('subclass'), debug=debug)
+                    c, subsubclass = cls.get_class_from_text_using_ollama_with_approximation(prompt, ontology[superclass][subclass]['subsubclasses'], lo.get_class_defination('subsubclass'), debug=debug)
+                    d, category = cls.get_class_from_text_using_ollama_with_approximation(prompt, ontology[superclass][subclass][subsubclass]['categories'], lo.get_class_defination('category'), debug=debug)
                     
                     if a:
                         ontology['superclasses'].append(superclass)
