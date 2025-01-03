@@ -41,8 +41,11 @@ def neo4j_query_page(neo4j_conn):
     # Sidebar filters
     st.sidebar.header("Filters")
     
+    if neo4j_conn is None:
+        st.sidebar.error("Neo4j connection is not available. Please check the connection details and try again.")
+        return
     # Node Types section
-    
+
     node_types = get_node_types(neo4j_conn)
     selected_node_types = []
     
@@ -96,7 +99,7 @@ def neo4j_query_page(neo4j_conn):
             # Add nodes and edges from results
             for record in results:
                 if record['n']:
-                    node1_id = str(record['n'].id)
+                    node1_id = str(record['n'].element_id)
                     node1_labels = list(record['n'].labels)
                     node1_props = dict(record['n'].items())
                     G.add_node(node1_id, 
