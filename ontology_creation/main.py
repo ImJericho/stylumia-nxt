@@ -44,7 +44,7 @@ def main():
                 try:
                 # if 1:
                     debug = False
-                    a, superclass = cls.get_new_or_existing_class_from_text_using_ollama(prompt, ontology['superclasses'], lo.get_class_defination('superclass'), debug)
+                    a, superclass = cls.get_existing_class_from_text_using_ollama(prompt, ontology['superclasses'], lo.get_class_defination('superclass'), debug)
                     b, class_t = cls.get_new_or_existing_class_from_text_using_ollama(prompt, ontology[superclass]['classes'], lo.get_class_defination('class'), debug, parent_classes=[superclass])
                     if b:
                         c, type_t = cls.get_new_class_from_text_using_ollama(prompt, lo.get_class_defination('type'), debug, parent_classes=[superclass, class_t])
