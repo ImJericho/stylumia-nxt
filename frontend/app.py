@@ -15,6 +15,15 @@ import ast
 from dotenv import load_dotenv
 from remove_fields_from_json import remove_fields_from_json
 
+# import sys
+
+# sys.path.append("/C:/IITISM/Dev/Stylumia/stylumia-nxt/web-scraper-engine")
+
+# import post_scraper
+from top100_bs import top100
+from profile_scraper import profiles_scraper
+from posts_scraper import all_posts_info
+
 load_dotenv()
 
 
@@ -123,7 +132,9 @@ def trend_analysis_page():
         processed_rows = []
         processed_data = []
         graph_placeholder = st.empty()
+        table_placeholder = st.empty()
         required_columns = ["superclass", "class", "type", "variant", "style"]
+
         for index, row in df.iterrows():
             # Update progress
             progress = (index + 1) / len(df)
@@ -152,6 +163,8 @@ def trend_analysis_page():
                     text="Frequency",
                 )
                 graph_placeholder.plotly_chart(fig, use_container_width=True)
+                processed_df = pd.DataFrame(processed_rows)
+                table_placeholder.dataframe(processed_df)
 
             time.sleep(0.1)  # Simulate processing time
 
@@ -291,6 +304,32 @@ def ontology_page(neo4j_conn):
             st.write(row["entity_value"])
 
 
+# Page 5:Social Trends page
+def social_trends_page():
+
+    st.title("Social Trends")
+    st.write("Social Trends extracted from Instagram")
+    if st.button("Get the List of Top 100 Insta Influencers"):
+        top100_list = top100()
+        st.write("Here is the list:")
+        st.write(top100_list)
+
+    if st.button("Get the profiles of Top 100 Insta Influencers"):
+        posts_urls_list = profiles_scraper()
+        st.write("Here is the list:")
+        st.write(posts_urls_list)
+
+    if st.button("Posts of Top 100"):
+        # image_urls_list = [
+        #     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1lIMq-ex44_W0z5WTCOgDDrqpYaSZ1LQOkA&s",
+        #     "https://dist.neo4j.com/wp-content/uploads/20210621234221/0EdRw_utw9F-Hd7MW.png",
+        # ]
+        image_urls_list = all_posts_info()
+        st.write("Here are the image URLs and the images:")
+        for url in image_urls_list:
+            st.image(url, caption=f"Image from {url}", use_column_width=True)
+
+
 def main():
     st.set_page_config(page_title="Fashion Analytics", layout="wide")
 
@@ -306,7 +345,8 @@ def main():
 
     # Sidebar navigation
     page = st.sidebar.selectbox(
-        "Select Page", ["Neo4j Query", "Trend Analysis", "Verification", "Ontology"]
+        "Select Page",
+        ["Neo4j Query", "Trend Analysis", "Verification", "Ontology", "Social Trends"],
     )
 
     if page == "Neo4j Query":
@@ -315,6 +355,8 @@ def main():
         trend_analysis_page()
     elif page == "Verification":
         verification_page()
+    elif page == "Social Trends":
+        social_trends_page()
     else:  # Ontology
         ontology_page(neo4j_conn)
 
