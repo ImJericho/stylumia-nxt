@@ -27,6 +27,7 @@ def main():
             print(f"Processing {filename}")
             df = pd.read_csv(f'{path}/{filename}')
             total_rows = len(df)
+            ontology = json.load(open('ontology_dict.json'))
 
             for index, row in df.iterrows():
                 product_name = row['product_name']
@@ -40,7 +41,6 @@ def main():
                 feature_list = row['feature_list']
                 prompt = prompt_input.format(product_name=product_name, description=description, meta_info=meta_info, feature_list=feature_list)
                 
-                ontology = json.load(open('ontology_dict.json'))
                 try:
                 # if 1:
                     debug = False
@@ -68,7 +68,7 @@ def main():
                         c=True
                         d=True
                         e=True
-                    elif c:
+                    if c:
                         if 'types' not in ontology[superclass][class_t]:
                             ontology[superclass][class_t]['types'] = [type_t]
                         else:
@@ -86,11 +86,6 @@ def main():
                             ontology[superclass][class_t][type_t]['styles'] = [style]
                         else:
                             ontology[superclass][class_t][type_t]['styles'].append(style)
-
-                    if b or c or d or e:
-                        with open('ontology_dict.json', 'w') as f:
-                            print(f"Updating class in ontology (adding {class_t})")
-                            json.dump(ontology, f)      
 
                 except:
                     print(f"Error classifing row {index + 1} of {total_rows} in {filename}")
@@ -125,6 +120,9 @@ def main():
                     print(f"Processed row {index + 1} of {total_rows} in {filename}")
 
                 if i % 50 == 0:
+                    with open('ontology_dict.json', 'w') as f:
+                            print(f"Updating class in ontology (adding {class_t})")
+                            json.dump(ontology, f)      
                     with open(f'dataset/processed_json/FINAL_READY_DATA_{filename[:-4]}.json', 'w') as f:
                         print(f"Saving another chunk data -- Total wasted rows: {wasted} out of {total}")
                         json.dump(data, f)
