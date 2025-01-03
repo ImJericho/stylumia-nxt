@@ -60,24 +60,37 @@ def main():
                             e, style = cls.get_new_or_existing_class_from_text_using_ollama(prompt, ontology[superclass][class_t][type_t]['styles'], lo.get_class_defination('style'), debug, parent_classes=[superclass, class_t, type_t])
 
                     if b:
-                        ontology[superclass]['classes'].append(class_t)
-                        ontology[superclass][class_t]['types'].append(type_t)
-                        ontology[superclass][class_t][type_t]['variants'].append(variant)
-                        update_ontology = True                
+                        if 'classes' not in ontology[superclass]:
+                            ontology[superclass]['classes'] = [class_t]
+                        else:
+                            ontology[superclass]['classes'].append(class_t)
+                        ontology[superclass][class_t] = {}
+                        c=True
+                        d=True
+                        e=True
                     elif c:
-                        ontology[superclass][class_t]['types'].append(type_t)
-                        ontology[superclass][class_t][type_t]['variants'].append(variant)
-                        update_ontology = True 
+                        if 'types' not in ontology[superclass][class_t]:
+                            ontology[superclass][class_t]['types'] = [type_t]
+                        else:
+                            ontology[superclass][class_t]['types'].append(type_t)
+                        ontology[superclass][class_t][type_t] = {}
+                        d=True
+                        e=True
                     if d:
-                        ontology[superclass][class_t][type_t]['variants'].append(variant)
-                        update_ontology = True         
+                        if 'variants' not in ontology[superclass][class_t][type_t]:
+                            ontology[superclass][class_t][type_t]['variants'] = [variant]
+                        else:
+                            ontology[superclass][class_t][type_t]['variants'].append(variant)
                     if e:
-                        ontology[superclass][class_t][type_t]['styles'].append(style)
-                        update_ontology = True     
-                    if update_ontology:
+                        if 'styles' not in ontology[superclass][class_t][type_t]:
+                            ontology[superclass][class_t][type_t]['styles'] = [style]
+                        else:
+                            ontology[superclass][class_t][type_t]['styles'].append(style)
+
+                    if b or c or d or e:
                         with open('ontology_dict.json', 'w') as f:
-                            print("Updating ontology")
-                            json.dump(ontology, f)
+                            print(f"Updating class in ontology (adding {class_t})")
+                            json.dump(ontology, f)      
 
                 except:
                     print(f"Error classifing row {index + 1} of {total_rows} in {filename}")
@@ -108,10 +121,10 @@ def main():
                 combined_dict2 = {**combined_dict, **compulsory_properties}
                 data.append(combined_dict2)
                 
-                if i % 1 == 0:
+                if i % 10 == 0:
                     print(f"Processed row {index + 1} of {total_rows} in {filename}")
 
-                if i % 10 == 0:
+                if i % 50 == 0:
                     with open(f'dataset/processed_json/FINAL_READY_DATA_{filename[:-4]}.json', 'w') as f:
                         print(f"Saving another chunk data -- Total wasted rows: {wasted} out of {total}")
                         json.dump(data, f)
