@@ -7,10 +7,6 @@ DataIngestion Page pe ek button hoga -> find new products types  -> Displays pro
 
 
 Verification Page will take data from ../backend/img2txt2txt_engine/data and will display all the rows in that file along with a checkbox  -> If checkbox got ticked then send add that row in the ../backend/verification_engine/data
-                ->After saving the trend engine will take the data from ../backend/verification_engine/data and do the analysis
-                ->After saving the ontology_engine will take the data from ../backend/verification_engine/data and update the ontology
+                  ->After saving the trend engine will take the data from ../backend/verification_engine/data and do the analysis
+                  ->After saving the ontology_engine will take the data from ../backend/verification_engine/data and update the ontology
 
-
-
-
-                                                                       
