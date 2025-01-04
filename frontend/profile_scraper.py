@@ -49,9 +49,9 @@ def profiles_scraper():
             for url in post_urls_for_one_profile:
                 print(url)
             post_urls_for_all_profiles.extend(post_urls_for_one_profile)
-        time.sleep(30)
+        time.sleep(10)
         c += 1
-        if c == 2:
+        if c == 13:
             break
 
     return post_urls_for_all_profiles

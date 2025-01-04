@@ -46,19 +46,20 @@ def all_posts_info():
     for post in all_posts_urls:
         posts = scrape_post(post)
         # posts = scrape_post("https://www.instagram.com/p/DD7oBI2RtAR/")
-        link = ""
-        if posts["is_video"] == True:
-            link = posts["video_url"]
-            # response = requests.get(link, stream=True)
-            # file = open("video.mp4", "wb")
-            # for chunk in response.iter_content(chunk_size=1024):
-            #   if chunk:
-            #     file.write(chunk)
-            # response = wget.download(link, "video.mp4")
-        else:
-            link = posts["display_url"]
-            posts_image_urls.append(link)
-            # response = wget.download(link, "image.jpg")
+        link = posts["display_url"]
+        posts_image_urls.append(link)
+        # if posts["is_video"] == True:
+        #     link = posts["video_url"]
+        # response = requests.get(link, stream=True)
+        # file = open("video.mp4", "wb")
+        # for chunk in response.iter_content(chunk_size=1024):
+        #   if chunk:
+        #     file.write(chunk)
+        # response = wget.download(link, "video.mp4")
+        # else:
+        #     link = posts["display_url"]
+        #     posts_image_urls.append(link)
+        # response = wget.download(link, "image.jpg")
 
         # caption = posts["edge_media_to_caption"]["edges"][0]["node"]["text"]
         # comments_count = posts["edge_media_to_parent_comment"]["count"]
@@ -72,7 +73,8 @@ def all_posts_info():
         #             "likes": p["node"]["edge_liked_by"]["count"],
         #         }
         #     )
-        time.sleep(30)
+        time.sleep(15)
+    print(posts_image_urls)
     return posts_image_urls
 
 
