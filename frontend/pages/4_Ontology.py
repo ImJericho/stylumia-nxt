@@ -1,8 +1,7 @@
 import streamlit as st
 from pyvis.network import Network
-import sqlite3
 import pandas as pd
-
+    
 data = {
   "superclasses": [
     "Decor",
@@ -1104,6 +1103,22 @@ def add_nodes_and_edges(net, parent, node, node_type_ind=0):
             net.add_node(item, label=item, color=NODE_TYPES.get(node_type, "white"))
             net.add_edge(parent, item)
 
+def get_dropdown_options(data, selected_path):
+    """Traverse the data to get dropdown options based on the current selection path."""
+    node = data
+    for key in selected_path:
+        if isinstance(node, dict) and key in node:
+            node = node[key]
+        else:
+            return []
+    if isinstance(node, dict):
+        if "variants" in node and "styles" in node:
+            return {"variants": node["variants"], "styles": node["styles"]}
+        return list(node.keys())
+    elif isinstance(node, list):
+        return node
+    return []
+
 # Streamlit App
 st.title("Interactive Ontology Visualization")
 
@@ -1135,19 +1150,36 @@ for superclass in data["superclasses"]:
     net.add_node(superclass, label=superclass, color=NODE_TYPES["superclass"])
     add_nodes_and_edges(net, superclass, data.get(superclass, {}))
 
-# Generate HTML and display in Streamlit
+# Render PyVis Graph
 html_content = net.generate_html()
 st.components.v1.html(html_content, height=800, scrolling=True)
 
+# Check a Specific Ontology Subtree Section
+st.subheader("Check a Specific Ontology Subtree")
 
-# Expandable verified entities sections
-st.subheader("Verified Entities")
-conn = sqlite3.connect("verified_ontology.db")
-verified_df = pd.read_sql_query("SELECT * FROM verified_entities", conn)
-conn.close()
+selected_path = []
 
-for entity_type in ["superclass", "subclass", "subsubclass", "category", "style_attribute", "feature_list"]:
-    with st.expander(f"Verified {entity_type.capitalize()}"):
-        entities = verified_df[verified_df["entity_type"] == entity_type]
-        for _, row in entities.iterrows():
-            st.write(row["entity_value"])
+# Superclass Dropdown
+superclass_options = data["superclasses"]
+selected_superclass = st.selectbox("Select a Superclass", superclass_options, key="superclass")
+if selected_superclass:
+    selected_path.append(selected_superclass)
+    class_options = get_dropdown_options(data, selected_path)
+    
+    # Class Dropdown
+    selected_class = st.selectbox("Select a Class", class_options, key="class")
+    if selected_class:
+        selected_path.append(selected_class)
+        type_options = get_dropdown_options(data, selected_path)
+        
+        # Type Dropdown
+        selected_type = st.selectbox("Select a Type", type_options, key="type")
+        if selected_type:
+            selected_path.append(selected_type)
+            final_data = get_dropdown_options(data, selected_path)
+            
+            if isinstance(final_data, dict):
+                st.write("### Variants")
+                st.write(final_data.get("variants", []))
+                st.write("### Styles")
+                st.write(final_data.get("styles", []))
