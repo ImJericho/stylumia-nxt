@@ -8,7 +8,7 @@ import logging
 from transformers import pipeline
 import os
 from dotenv import load_dotenv 
-
+from tqdm import tqdm
 load_dotenv() 
 
 class FashionOntologySystem:
@@ -67,23 +67,23 @@ class FashionOntologySystem:
     def extract_features_from_text(self, text: str) -> List[str]:
         """Extract features from text using NLP."""
         # Initialize the zero-shot classification pipeline
-        classifier = pipeline("zero-shot-classification",
-                            model="facebook/bart-large-mnli")
+        # classifier = pipeline("zero-shot-classification",
+        #                     model="facebook/bart-large-mnli")
         
-        # Define feature categories to look for
-        categories = [
-            "color", "material", "pattern", "style", "fit",
-            "occasion", "season", "size", "brand", "price_range"
-        ]
+        # # Define feature categories to look for
+        # categories = [
+        #     "color", "material", "pattern", "style", "fit",
+        #     "occasion", "season", "size", "brand", "price_range"
+        # ]
         
-        # Classify the text
-        result = classifier(text, categories, multi_label=True)
+        # # Classify the text
+        # result = classifier(text, categories, multi_label=True)
         
         # Extract relevant features based on confidence threshold
         features = []
-        for label, score in zip(result['labels'], result['scores']):
-            if score > 0.5:  # Confidence threshold
-                features.append(f"{label}: {text}")
+        # for label, score in zip(result['labels'], result['scores']):
+        #     if score > 0.5:  # Confidence threshold
+        #         features.append(f"{label}: {text}")
         
         return features
 
@@ -93,8 +93,10 @@ class FashionOntologySystem:
         
         # Read CSV in chunks
         for chunk in pd.read_csv(file_path, chunksize=batch_size):
+            # use tqdm to show progress bar
             with self.driver.session() as session:
-                for _, row in chunk.iterrows():
+                for _, row in tqdm(chunk.iterrows(), total=len(chunk)):
+                # for _, row in chunk.iterrows():
                     try:
                         # Process features and attributes
                         features = self.process_feature_list(row['feature_list'])
@@ -180,13 +182,13 @@ def main():
         
         # Process each CSV file
         csv_files = [
-            "Bathroom Vanities Data Dump.csv",
-            "Data Dump Kurtis.csv",
             "Dresses Data Dump.csv",
+            "Bathroom Vanities Data Dump.csv",
             "Earrings Data Dump.csv",
+            "Kurtis Data Dump Kurtis.csv",
             "Jeans Data Dump.csv",
             "Saree Data Dump.csv",
-            "shirts_data_dump.csv",
+            "Shirts data_dump.csv",
             "Sneakers Data Dump.csv",
             "Tshirts Data Dump.csv",
             "Watches Data Dump.csv"
