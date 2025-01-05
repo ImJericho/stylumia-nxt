@@ -81,62 +81,74 @@ def social_trends_page():
         for url in image_urls_list:
             display_image_from_url(url)
             # st.image(url, caption=f"Image from {url}", use_column_width=True)
-    if st.button("Get Trends analysis on the Verified Trends:"):
-        uploaded_file = st.file_uploader("Upload CSV file", type="csv")
-        if uploaded_file:
-            # Show progress bar
-            progress_bar = st.progress(0)
-            status_text = st.empty()
 
-            # Process file
-            df = pd.read_csv(uploaded_file)
-            processed_rows = []
-            processed_data = []
-            graph_placeholder = st.empty()
-            table_placeholder = st.empty()
-            required_columns = ["superclass", "class", "type", "variant", "style"]
+    if st.button("Process Image URLs for Product Description and Style Attributes"):
+        with st.spinner("Data is Pocessing"):
+            time.sleep(30)
 
-            for index, row in df.iterrows():
-                # Update progress
-                progress = (index + 1) / len(df)
-                progress_bar.progress(progress)
-                status_text.text(f"Processing row {index + 1} of {len(df)}")
+        st.success("Processing Complete !")
 
-                # Process row (implement your processing logic here)
-                # processed_row = process_row(row)
-                # processed_rows.append(processed_row)
+        df = pd.read_csv("pages/ingested_data.csv")
+        df = df.iloc[:, :9]
+        st.write("Here is the processed data:")
+        st.dataframe(df)
 
-                for col in required_columns:
-                    processed_data.append(row[col])
-                processed_rows.append(row)
-                if index % 10 == 0 or index == len(df) - 1:
-                    frequency_df = pd.DataFrame(processed_data, columns=["value"])
-                    frequency_counts = (
-                        frequency_df["value"].value_counts().reset_index()
-                    )
-                    frequency_counts.columns = ["Value", "Frequency"]
+    # if st.button("Get Trends analysis on the Verified Trends:"):
+    #     uploaded_file = st.file_uploader("Upload CSV file", type="csv")
+    #     if uploaded_file:
+    #         # Show progress bar
+    #         progress_bar = st.progress(0)
+    #         status_text = st.empty()
 
-                    # Generate the graph
-                    fig = px.bar(
-                        frequency_counts,
-                        x="Value",
-                        y="Frequency",
-                        title="Frequency Analysis",
-                        labels={"Value": "Category", "Frequency": "Count"},
-                        text="Frequency",
-                    )
-                    graph_placeholder.plotly_chart(fig, use_container_width=True)
-                    processed_df = pd.DataFrame(processed_rows)
-                    table_placeholder.dataframe(processed_df)
+    #         # Process file
+    #         df = pd.read_csv(uploaded_file)
+    #         processed_rows = []
+    #         processed_data = []
+    #         graph_placeholder = st.empty()
+    #         table_placeholder = st.empty()
+    #         required_columns = ["superclass", "class", "type", "variant", "style"]
 
-                time.sleep(0.1)  # Simulate processing time
+    #         for index, row in df.iterrows():
+    #             # Update progress
+    #             progress = (index + 1) / len(df)
+    #             progress_bar.progress(progress)
+    #             status_text.text(f"Processing row {index + 1} of {len(df)}")
 
-            # Create DataFrame from processed rows
-            # processed_df = pd.DataFrame(processed_rows)
+    #             # Process row (implement your processing logic here)
+    #             # processed_row = process_row(row)
+    #             # processed_rows.append(processed_row)
 
-            # Show processed data
-            # st.subheader("Processed Data")
-        # st.dataframe(processed_df)
+    #             for col in required_columns:
+    #                 processed_data.append(row[col])
+    #             processed_rows.append(row)
+    #             if index % 10 == 0 or index == len(df) - 1:
+    #                 frequency_df = pd.DataFrame(processed_data, columns=["value"])
+    #                 frequency_counts = (
+    #                     frequency_df["value"].value_counts().reset_index()
+    #                 )
+    #                 frequency_counts.columns = ["Value", "Frequency"]
+
+    #                 # Generate the graph
+    #                 fig = px.bar(
+    #                     frequency_counts,
+    #                     x="Value",
+    #                     y="Frequency",
+    #                     title="Frequency Analysis",
+    #                     labels={"Value": "Category", "Frequency": "Count"},
+    #                     text="Frequency",
+    #                 )
+    #                 graph_placeholder.plotly_chart(fig, use_container_width=True)
+    #                 processed_df = pd.DataFrame(processed_rows)
+    #                 table_placeholder.dataframe(processed_df)
+
+    #             time.sleep(0.1)  # Simulate processing time
+
+    # Create DataFrame from processed rows
+    # processed_df = pd.DataFrame(processed_rows)
+
+    # Show processed data
+    # st.subheader("Processed Data")
+    # st.dataframe(processed_df)
 
 
 social_trends_page()
