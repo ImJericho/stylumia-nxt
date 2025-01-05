@@ -10,6 +10,8 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - **Scalable Neo4j AuraDB** for efficient data storage and querying.
 - **Interactive User Interface** for stakeholders and fashion experts.
 - **Social Media Trend Analysis Engine** for identifying emerging styles.
+![Screenshot 2025-01-05 183105](https://github.com/user-attachments/assets/67852dc5-7c1e-42f1-b32c-426837b64ee2)
+![Screenshot (225)](https://github.com/user-attachments/assets/15bed628-d870-4dba-8828-d0fba96df9e8)
 
 ---
 
@@ -45,6 +47,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 3. **Type**: General physical form (e.g., Jeans, T-Shirts).
 4. **Variant**: Specific variations (e.g., Distressed Jeans).
 5. **Style**: Fine-grained descriptors (e.g., Graphic Print, Embroidered).
+![ba35abb2-1c13-4b1b-98a5-d7b9204344d0](https://github.com/user-attachments/assets/d00de66c-8494-48cb-beaf-bb6c6f1b5827)
 
 #### Features:
 - **Adaptive Structure**: Flexible for growth and expansion.
@@ -62,22 +65,29 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 ### 1. **Query Page**:
 - Filter and retrieve specific products based on ontology attributes.
 - Display relationships between selected products and other entities.
+![Screenshot (226)](https://github.com/user-attachments/assets/2ce3809a-098d-451d-9280-470b237a3b89)
 
 ### 2. **Trend Analysis Page**:
 - Highlights trending products, styles, and categories.
 - Tracks emerging trends based on patterns across social media.
+![Screenshot (227)](https://github.com/user-attachments/assets/959d993f-4033-47b1-ad7a-ebdf2af638d8)
 
 ### 3. **Verification Page**:
 - Human-in-the-loop validation to ensure ontology accuracy.
 - Verified updates are automatically uploaded to Neo4j.
-  
+  ![Screenshot 2025-01-05 183829](https://github.com/user-attachments/assets/3eaf3b01-30b2-4e4d-a14a-c92095509897)
+
 ### 4. **Ontology Page**:
 - Visualize hierarchical structures of fashion entities.
 - Explore relationships and connections in an interactive panel.
+![Screenshot (230)](https://github.com/user-attachments/assets/70d80644-09d8-48eb-b372-52df6e5879f2)
+![Screenshot (229)](https://github.com/user-attachments/assets/7618087a-a202-4fcb-aa2a-f89d03a49bc9)
+![Screenshot (228)](https://github.com/user-attachments/assets/94df344b-ef46-4c0c-a1a6-6c2e83007569)
 
 ### 5. **Social Trends Page**:
 - Monitors top celebrity posts on platforms like Instagram.
 - Extracts features and updates the ontology for statistical assessment.
+![Screenshot 2025-01-05 183741](https://github.com/user-attachments/assets/0c7f2a66-4074-4e6a-8662-af517f810637)
 
 ---
 
@@ -90,6 +100,10 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - **Optimizations**:
   - Graph-based structure for fast retrieval.
   - Interactive visualization tools integrated with Neo4j.
+ 
+  
+![hippo](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWl1dDEyeHRuZGZhMmh5cml6aHUzb2E0cnk0M2todHc0bzJmbnIxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7s7Vf07bdL1eQQ1vUQ/giphy.gif)
+
 
 ---
 
@@ -176,3 +190,4 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
+## Our Efforts
