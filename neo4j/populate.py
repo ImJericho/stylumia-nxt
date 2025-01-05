@@ -39,7 +39,7 @@ class FashionOntologySystem:
 
         with self.driver.session() as session:
             for obj in tqdm(objects):
-                try: 
+                try:
                     # Create Cypher query
                     query = """
                     MERGE (p:Product {product_id: $product_id})
@@ -60,24 +60,52 @@ class FashionOntologySystem:
 
                     # Add other relations if they exist
                     for key, value in obj.items():
-                        if key not in ['product name', 'sno', 'superclass', 'subclass', 'subsubclass', 'category']:
-                            query += f"""
-                            MERGE (a"""+getShortField(key)+":"+getShortField(key) +"{name: $"+getShortField(key)+"""}) 
-                            MERGE (p)-[:HAS]->(a"""+getShortField(key)+""")
+                        if key not in [
+                            "product name",
+                            "sno",
+                            "superclass",
+                            "subclass",
+                            "subsubclass",
+                            "category",
+                        ]:
+                            query += (
+                                f"""
+                            MERGE (a"""
+                                + getShortField(key)
+                                + ":"
+                                + getShortField(key)
+                                + "{name: $"
+                                + getShortField(key)
+                                + """}) 
+                            MERGE (p)-[:HAS]->(a"""
+                                + getShortField(key)
+                                + """)
                             """
+                            )
 
                     # Execute query
                     session.run(
                         query,
-                        product_id=obj['sno'],
-                        product_name=obj['product name'],
-                        superclass=obj['superclass'],
-                        subclass=obj['subclass'],
-                        subsubclass=obj['subsubclass'],
-                        category=obj['category'],
-                        **{getShortField(key): obj[key] for key in obj if key not in ['product name', 'sno', 'superclass', 'subclass', 'subsubclass', 'category']}
+                        product_id=obj["sno"],
+                        product_name=obj["product name"],
+                        superclass=obj["superclass"],
+                        subclass=obj["subclass"],
+                        subsubclass=obj["subsubclass"],
+                        category=obj["category"],
+                        **{
+                            getShortField(key): obj[key]
+                            for key in obj
+                            if key
+                            not in [
+                                "product name",
+                                "sno",
+                                "superclass",
+                                "subclass",
+                                "subsubclass",
+                                "category",
+                            ]
+                        },
                     )
-                    
 
                 except Exception as e:
                     self.logger.error(f"Error processing row: {obj['product name']}")
@@ -110,3 +138,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
