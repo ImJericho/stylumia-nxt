@@ -142,7 +142,9 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 ---
 
 ## Technologies Used
-
+- **Unsloth**: For fine-tunning the open-source models effentiantly in free tier notebooks.
+- **Ollama**: For using the model in python and usage of transformers lib at the time of fine-tunning
+- **Ngrok**: For connecting the hosted ollama
 - **Neo4j**: Graph database for ontology storage and retrieval.
 - **Streamlit**: Intuitive frontend for user interactions.
 - **LLMs**: For feature extraction and trend analysis.
@@ -160,13 +162,18 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    ```bash
    pip install -r requirements.txt
    ```
+4. Install our feature extraction models:
+   ```bash
+   ollama run hf.co/ImJericho/model-t2t-stylumia-8bit
+   ollama run llama3.2
+   ```
 
 ### Steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ImJericho/stylumia-nxt
    ```
-2. Set up Neo4j credentials in `.env`:
+2. Set env variables `.env`:
    ```env
    NEO4J_URI=bolt://<your-neo4j-uri>
    NEO4J_USER=<your-username>
