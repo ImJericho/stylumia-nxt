@@ -59,21 +59,21 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ## User Interface
 
-### 1. **Ontology Page**:
-- Visualize hierarchical structures of fashion entities.
-- Explore relationships and connections in an interactive panel.
-
-### 2. **Query Page**:
+### 1. **Query Page**:
 - Filter and retrieve specific products based on ontology attributes.
 - Display relationships between selected products and other entities.
+
+### 2. **Trend Analysis Page**:
+- Highlights trending products, styles, and categories.
+- Tracks emerging trends based on patterns across social media.
 
 ### 3. **Verification Page**:
 - Human-in-the-loop validation to ensure ontology accuracy.
 - Verified updates are automatically uploaded to Neo4j.
-
-### 4. **Trend Analysis Page**:
-- Highlights trending products, styles, and categories.
-- Tracks emerging trends based on patterns across social media.
+  
+### 4. **Ontology Page**:
+- Visualize hierarchical structures of fashion entities.
+- Explore relationships and connections in an interactive panel.
 
 ### 5. **Social Trends Page**:
 - Monitors top celebrity posts on platforms like Instagram.
@@ -126,6 +126,9 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
+## Take a look for yourself [here](https://stylumia-fashion.streamlit.app/) 
+---
+
 ## Technologies Used
 
 - **Neo4j**: Graph database for ontology storage and retrieval.
@@ -136,7 +139,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
-## How to Run the Solution
+## How to Run the Solution Locally
 
 ### Prerequisites:
 1. Python 3.9 or higher.
@@ -149,7 +152,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/fashion-ontology
+   git clone https://github.com/ImJericho/stylumia-nxt
    ```
 2. Set up Neo4j credentials in `.env`:
    ```env
@@ -162,14 +165,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    streamlit run app.py
    ```
 4. Access the application at `http://localhost:8501`.
-
----
-
-## Future Enhancements
-
-1. **Integration with Additional Social Platforms**: Extend trend analysis to Twitter and TikTok.
-2. **Enhanced Ontology Expansion**: Incorporate more granular feature extraction.
-3. **Real-Time Analysis**: Enable live updates for trends and product features.
 
 ---
 
