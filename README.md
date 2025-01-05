@@ -176,7 +176,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    ```
 3. Run the Streamlit application:
    ```bash
-   streamlit run app.py
+   streamlit run .\frontend\Fashion.py
    ```
 4. Access the application at `http://localhost:8501`.
 
