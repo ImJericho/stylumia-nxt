@@ -16,6 +16,8 @@ from dotenv import load_dotenv
 load_dotenv() 
 from config import NEOCONN, init_sqlite_db, main as main_config
 
+main_config()
+
 # Update the Neo4j Query Page section with this code
 def get_node_types(neo4j_conn):
     """Get all unique node types from the database"""
@@ -41,7 +43,7 @@ def neo4j_query_page(neo4j_conn):
     # Sidebar filters
     st.sidebar.header("Filters")
     
-    if neo4j_conn is None:
+    while neo4j_conn is None:
         st.sidebar.error("Neo4j connection is not available. Please check the connection details and try again.")
         return
     # Node Types section
@@ -209,11 +211,8 @@ def neo4j_query_page(neo4j_conn):
 
 def main():
     st.set_page_config(page_title="Fashion Analytics", layout="wide")
-    # Initialize databases
-    init_sqlite_db()
-
     # Connect to Neo4j
     neo4j_query_page(NEOCONN)
+
 if __name__ == "__main__":
-    main_config()
     main()
