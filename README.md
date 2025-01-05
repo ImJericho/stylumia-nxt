@@ -171,6 +171,9 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    NEO4J_URI=bolt://<your-neo4j-uri>
    NEO4J_USER=<your-username>
    NEO4J_PASSWORD=<your-password>
+   ONT_NEO4J_URI=bolt://<your-neo4j-ontology-uri>
+   ONT_NEO4J_USER=<your-username> # for ontology database
+   ONT_NEO4J_PASSWORD=<your-password> # for ontology database
    OLLAMA_URL=<your-ollama-url> // where all the fine-tunned model will be hosted
    HUGGINGFACE_TOKEN=<your-hf-token>
    ```
