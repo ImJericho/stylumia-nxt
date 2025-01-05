@@ -344,9 +344,9 @@ if selected_superclass:
                 st.write("### Styles")
                 st.write(final_data.get("styles", []))
 
-URI = os.getenv("NEO4J_URI1")
-USER = os.getenv("NEO4J_USERNAME1")
-PASSWORD = os.getenv("NEO4J_PASSWORD1")
+URI = os.getenv("ONT_NEO4J_URI")
+USER = os.getenv("ONT_NEO4J_USERNAME")
+PASSWORD = os.getenv("ONT_NEO4J_PASSWORD")
 NEOCONN = Neo4jConnection(uri=URI, user=USER, password=PASSWORD)
 # Connect to Neo4j
 neo4j_query_page(NEOCONN)

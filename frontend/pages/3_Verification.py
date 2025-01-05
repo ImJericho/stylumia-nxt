@@ -112,7 +112,8 @@ def verification_page():
         "variant",
         "style",
     ]:
-        st.write(f"\n{entity_type}:")
+        st.markdown(f"### {entity_type.capitalize()}")
+
         entities = unverified_df[unverified_df["entity_type"] == entity_type]
 
         for _, row in entities.iterrows():
