@@ -196,5 +196,5 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 * **Data prepration for model fine tunningtps** : [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-ontology-generation-script)
 * **Model-training**: [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-model-training)
 * **Data prepration for model fine tunning** : [Jupyter Notebook](https://github.com/ImJericho/stylumia-nxt/blob/main/text_model/data_processing.ipynb)
-* * **Checkout the deployed frontend with limitted feature** : [(https://stylumia-fashion.streamlit.app)
+* **Checkout the deployed frontend with limitted feature** : [Stylumia Fashion](https://stylumia-fashion.streamlit.app)
 
