@@ -173,6 +173,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    NEO4J_URI=bolt://<your-neo4j-uri>
    NEO4J_USER=<your-username>
    NEO4J_PASSWORD=<your-password>
+   OLLAMA_URL=<your-ollama-url> // where all the fine-tunned model are hosted
    ```
 3. Run the Streamlit application:
    ```bash
@@ -195,3 +196,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 * **Data prepration for model fine tunningtps** : [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-ontology-generation-script)
 * **Model-training**: [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-model-training)
 * **Data prepration for model fine tunning** : [Jupyter Notebook](https://github.com/ImJericho/stylumia-nxt/blob/main/text_model/data_processing.ipynb)
+*
+* * **Checkout the deployed frontend with limitted feature** : [(https://stylumia-fashion.streamlit.app)
+
