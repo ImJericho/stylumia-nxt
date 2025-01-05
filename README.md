@@ -21,7 +21,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 #### 1. **Image-to-Text Model**:
    - **Purpose**: Extracts features from product images.
-   - **Base Model**: LLaVA-3 (instruction-based extraction).
+   - **Base Model**: LLaVA-3 as base model (instruction-based extraction).
    - **Workflow**:
      - **Object Detection**: Identifies the primary product in the image.
      - **Detailed Analysis**: Extracts attributes and features for the identified product.
@@ -36,6 +36,7 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    - **Phases**:
      - **Similarity Matching**: Calculates cosine similarity between new data and existing ontology classes.
      - **Class Generation**: Creates new classes if no match is found, ensuring generic applicability.
+![image](https://github.com/user-attachments/assets/9d8b573d-077f-4b13-9299-9d758e76ca09)
 
 ---
 
@@ -47,16 +48,13 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 3. **Type**: General physical form (e.g., Jeans, T-Shirts).
 4. **Variant**: Specific variations (e.g., Distressed Jeans).
 5. **Style**: Fine-grained descriptors (e.g., Graphic Print, Embroidered).
-![ba35abb2-1c13-4b1b-98a5-d7b9204344d0](https://github.com/user-attachments/assets/d00de66c-8494-48cb-beaf-bb6c6f1b5827)
+![image](https://github.com/user-attachments/assets/da35a663-513a-4641-9aaa-3a8088baa8f7)
+
 
 #### Features:
 - **Adaptive Structure**: Flexible for growth and expansion.
 - **Dynamic Classes**: AI-driven creation of new categories.
-- **Cross-Aware Feature**: Enables cross-category comparisons (e.g., Dhoti vs. Jeans under "Bottom-wear").
-
-#### Constraints and Extensibility:
-- Dynamically generates new classes if no match exists.
-- Requires human verification for updates to ensure accuracy.
+- **Cross-Aware Feature**: Enables cross-category comparisons (e.g., Dhoti vs. Jeans under same "Bottom-wear" inspite of being in different grandparent class).
 
 ---
 
@@ -173,7 +171,8 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    NEO4J_URI=bolt://<your-neo4j-uri>
    NEO4J_USER=<your-username>
    NEO4J_PASSWORD=<your-password>
-   OLLAMA_URL=<your-ollama-url> // where all the fine-tunned model are hosted
+   OLLAMA_URL=<your-ollama-url> // where all the fine-tunned model will be hosted
+   HUGGINGFACE_TOKEN=<your-hf-token>
    ```
 3. Run the Streamlit application:
    ```bash
@@ -196,5 +195,4 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 * **Data prepration for model fine tunningtps** : [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-ontology-generation-script)
 * **Model-training**: [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-model-training)
 * **Data prepration for model fine tunning** : [Jupyter Notebook](https://github.com/ImJericho/stylumia-nxt/blob/main/text_model/data_processing.ipynb)
-* **Checkout the deployed frontend with limitted feature** : [Stylumia Fashion](https://stylumia-fashion.streamlit.app)
 
