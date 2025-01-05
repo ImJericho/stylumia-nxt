@@ -57,7 +57,7 @@ class FashionOntologySystem:
 
         with self.driver.session() as session:
             for obj in tqdm(objects):
-                try: 
+                try:
                     # Create Cypher query
                     query = """
                     MERGE (p:Product {product_id: $product_id})
@@ -88,6 +88,7 @@ class FashionOntologySystem:
                             MERGE (a"""+fieldKey+":"+fieldKey +"{name: $"+fieldKey+"""}) 
                             MERGE (p)-[:"""+relationKey+"]->(a"+fieldKey+""")
                             """
+                            )
 
                     # Execute query
                     session.run(
@@ -101,7 +102,6 @@ class FashionOntologySystem:
                         style=obj['style'],
                         **{getShortField(key): obj[key] for key in obj if key not in ['product_id', 'product_name', 'superclass', 'class', 'type', 'variant', 'style']}
                     )
-                    
 
                 except Exception as e:
                     self.logger.error(f"Error processing row: {obj['product_name']}")
@@ -136,3 +136,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
