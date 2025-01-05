@@ -10,10 +10,28 @@ import os
 from dotenv import load_dotenv 
 from tqdm import tqdm
 load_dotenv() 
-from data import objects
+import json
 
 def getShortField(field):
-    return field.replace(" ", "_")
+    replacements = {
+        " ": "_",
+        "-": "_",
+        "(": "",
+        ")": "",
+        "/": "_",
+        ".": "",
+        ",": "",
+        "&": "and",
+        ".": "",
+        "?": "",
+        "!": "",
+        "'": "",
+        '"': "",
+        ":": "",
+    }
+    for key, value in replacements.items():
+        field = field.replace(key, value)
+    return field
 
 class FashionOntologySystem:
     def __init__(self, uri: str, user: str, password: str):
@@ -48,67 +66,45 @@ class FashionOntologySystem:
                     MERGE (sc:Superclass {name: $superclass})
                     MERGE (p)-[:BELONGS_TO]->(sc)
 
-                    MERGE (sbc:Subclass {name: $subclass})
-                    MERGE (p)-[:BELONGS_TO]->(sbc)
-
-                    MERGE (ssbc:Subsubclass {name: $subsubclass})
-                    MERGE (p)-[:BELONGS_TO]->(ssbc)
-
-                    MERGE (c:Category {name: $category})
+                    MERGE (c:Class {name: $className})
                     MERGE (p)-[:BELONGS_TO]->(c)
+
+                    MERGE (ty:Type {name: $type})
+                    MERGE (p)-[:TYPE_OF]->(ty)
+
+                    MERGE (var:Variant {name: $variant})
+                    MERGE (p)-[:VARIANT_OF]->(var)
+
+                    MERGE (st:Style {name: $style})
+                    MERGE (p)-[:STYLE_OF]->(st)
                     """
 
                     # Add other relations if they exist
                     for key, value in obj.items():
-                        if key not in [
-                            "product name",
-                            "sno",
-                            "superclass",
-                            "subclass",
-                            "subsubclass",
-                            "category",
-                        ]:
-                            query += (
-                                f"""
-                            MERGE (a"""
-                                + getShortField(key)
-                                + ":"
-                                + getShortField(key)
-                                + "{name: $"
-                                + getShortField(key)
-                                + """}) 
-                            MERGE (p)-[:HAS]->(a"""
-                                + getShortField(key)
-                                + """)
+                        if key not in ['product_id', 'product_name', 'superclass', 'class', 'type', 'variant', 'style']:
+                            fieldKey = getShortField(key)
+                            relationKey = "HAS_" + fieldKey.upper()
+                            query += f"""
+                            MERGE (a"""+fieldKey+":"+fieldKey +"{name: $"+fieldKey+"""}) 
+                            MERGE (p)-[:"""+relationKey+"]->(a"+fieldKey+""")
                             """
                             )
 
                     # Execute query
                     session.run(
                         query,
-                        product_id=obj["sno"],
-                        product_name=obj["product name"],
-                        superclass=obj["superclass"],
-                        subclass=obj["subclass"],
-                        subsubclass=obj["subsubclass"],
-                        category=obj["category"],
-                        **{
-                            getShortField(key): obj[key]
-                            for key in obj
-                            if key
-                            not in [
-                                "product name",
-                                "sno",
-                                "superclass",
-                                "subclass",
-                                "subsubclass",
-                                "category",
-                            ]
-                        },
+                        product_id=obj['product_id'],
+                        product_name=obj['product_name'],
+                        superclass=obj['superclass'],
+                        className=obj['class'],
+                        type=obj['type'],
+                        variant=obj['variant'],
+                        style=obj['style'],
+                        **{getShortField(key): obj[key] for key in obj if key not in ['product_id', 'product_name', 'superclass', 'class', 'type', 'variant', 'style']}
                     )
 
                 except Exception as e:
-                    self.logger.error(f"Error processing row: {obj['product name']}")
+                    self.logger.error(f"Error processing row: {obj['product_name']}")
                     self.logger.error(str(e))
     def close(self):
         """Close the Neo4j connection."""
@@ -120,18 +116,20 @@ def main():
     PASSWORD = os.getenv("NEO4J_PASSWORD")
 
     DIR = os.path.dirname(os.path.abspath(__file__))
-    DATADIR = os.path.join(DIR, "..", "data")
+    DATADIR = os.path.join(DIR, "..", "ontology_creation", "dataset", "processed_json")
     # Initialize system
     system = FashionOntologySystem(URI, USER, PASSWORD)
     
     try:
 
-        DIR = os.path.dirname(os.path.abspath(__file__))
-        
-        # Process each CSV file
-        Objects = objects
-        
-        system.load_data(Objects)
+        for filename in os.listdir(DATADIR):
+            if filename.endswith(".json"):
+                with open(os.path.join(DATADIR, filename), "r") as f:
+                    objects = json.load(f)
+
+                    print(f"Loading {filename}")
+
+                    system.load_data(objects)
             
     finally:
         system.close()
