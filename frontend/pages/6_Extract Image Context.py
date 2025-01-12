@@ -58,9 +58,13 @@ def image_context_extraction_page():
     if st.button("Extract", key="extract_button", help="Click to start extraction"):
         with st.spinner("Processing..."):
             call_extraction_engine_api()
-            time.sleep(30)  # Simulate processing time
+            time.sleep(1)  # Simulate processing time
 
         # Read extracted_data.db
+        st.write("")
+        st.subheader("Extracted Information")
+        st.write("----------------")
+
         conn = sqlite3.connect(extracted_db_path)
         extracted_df = pd.read_sql_query("SELECT * FROM extracted_data", conn)
         conn.close()
@@ -71,17 +75,7 @@ def image_context_extraction_page():
             extracted_df = pd.read_sql_query("SELECT * FROM extracted_data", conn)
             conn.close()
 
-        # Display all information
-        st.subheader("Extracted Information")
-
-        # Continuously update the dataframe
-        while True:
-            conn = sqlite3.connect(extracted_db_path)
-            updated_df = pd.read_sql_query("SELECT * FROM extracted_data", conn)
-            conn.close()
-            if not updated_df.equals(extracted_df):
-                extracted_df = updated_df
-                st.dataframe(extracted_df)
-            time.sleep(2)  # Check every second
+        st.dataframe(extracted_df)
+        time.sleep(2)  # Check every second
 
 image_context_extraction_page()
