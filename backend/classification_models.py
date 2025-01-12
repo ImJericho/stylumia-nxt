@@ -3,19 +3,17 @@ import re
 from sentence_transformers import SentenceTransformer, util
 from ollama import chat
 from ollama import ChatResponse
-import load_ontology as lo
+import utils
 import os
 import pandas as pd
-import helper as hp
+import utils
 import requests
-from dotenv import load_dotenv
-load_dotenv()
+import logging
 
+# Configure logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
-def llm_response(msg, model='llama3.2'):
-    ollama_url = os.getenv('OLLAMA_URL')
-    print(ollama_url)
+def llm_response(msg, ollama_url, model='llama3.2'):
     url = f"{ollama_url}/api/generate"
     payload = {
         "model": model,
@@ -23,9 +21,11 @@ def llm_response(msg, model='llama3.2'):
         "stream": False
     }
     response = requests.post(url, json=payload)
-    return response.json()['response']    
+    response = response.json()
+    response = response['response']   
+    return response 
 
-def get_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, debug=False, parent_classes=None):
+def get_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, ollama_url, debug=False, parent_classes=None):
     prompt = (
         "Classify a fashion product based on the following product description: {description}. "
         "{parent_classes_prompt}"
@@ -40,27 +40,27 @@ def get_existing_class_from_text_using_ollama(datapoint, class_list, class_defin
     prompt = prompt.format(description=datapoint, class_list = class_list, parent_classes_prompt=parent_class_prompt, class_defination=class_defination)
     json_obj = {}
     for i in range(5):
-        response = llm_response(prompt)
+        response = llm_response(prompt, ollama_url)
         if debug:
-            print(f"Attempt {i+1}, ({response})")
+            logging.debug(f"Attempt {i+1}, ({response})")
         try:
-            json_obj = lo.get_json_from_response(response)
+            json_obj = utils.get_json_from_response(response)
             break
         except:
             if debug:
-                print("Error in lo.get_json_from_response")
+                logging.debug("Error in lo.get_json_from_response")
             continue
     
     if json_obj['class'] not in class_list:
         if debug:
-            print(f"Invalid class: {json_obj['class']}")
+            logging.debug(f"Invalid class: {json_obj['class']}")
         return True, json_obj['class']
     
     if debug:
-        print(f"Valid class: {json_obj['class']}")
+        logging.debug(f"Valid class: {json_obj['class']}")
     return False, json_obj['class']
 
-def get_new_class_from_text_using_ollama(datapoint, class_defination, debug=False, parent_classes=None):
+def get_new_class_from_text_using_ollama(datapoint, class_defination, ollama_url, debug=False, parent_classes=None):
     prompt = (
         "Classify a fashion product based on the following product description: {description}. "
         "{parent_classes_prompt}"
@@ -74,22 +74,22 @@ def get_new_class_from_text_using_ollama(datapoint, class_defination, debug=Fals
     prompt = prompt.format(description=datapoint, parent_classes_prompt=parent_class_prompt, class_defination=class_defination)
 
     for i in range(5):
-        response = llm_response(prompt)
+        response = llm_response(prompt, ollama_url)
         if debug:
-            print(f"Attempt {i+1}, ({response})")
+            logging.debug(f"Attempt {i+1}, ({response})")
         try:
-            json_obj = lo.get_json_from_response(response)
+            json_obj = utils.get_json_from_response(response)
             break
         except:
             if debug:
-                print("Error in lo.get_json_from_response")
+                logging.debug("Error in lo.get_json_from_response")
             continue
     
     if debug:
-        print(f"Valid class: {json_obj['class']}")
+        logging.debug(f"Valid class: {json_obj['class']}")
     return False, json_obj['class']
 
-def get_new_or_focus_on_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, debug=False, parent_classes=None):
+def get_new_or_focus_on_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, ollama_url, debug=False, parent_classes=None):
     prompt = (
         "Classify a fashion product based on the following product description: {description}."
         "{parent_classes_prompt}"
@@ -106,27 +106,27 @@ def get_new_or_focus_on_existing_class_from_text_using_ollama(datapoint, class_l
     
 
     for i in range(5):
-        response = llm_response(prompt)
+        response = llm_response(prompt, ollama_url)
         if debug:
-            print(f"Attempt {i+1}, ({response})")
+            logging.debug(f"Attempt {i+1}, ({response})")
         try:
-            json_obj = lo.get_json_from_response(response)
+            json_obj = utils.get_json_from_response(response)
             break
         except:
             if debug:
-                print("Error in lo.get_json_from_response")
+                logging.debug("Error in lo.get_json_from_response")
             continue
     
     if json_obj['class'] not in class_list:
         if debug:
-            print(f"Invalid class: {json_obj['class']}")
+            logging.debug(f"Invalid class: {json_obj['class']}")
         return True, json_obj['class']
     
     if debug:
-        print(f"Valid class: {json_obj['class']}")
+        logging.debug(f"Valid class: {json_obj['class']}")
     return False, json_obj['class']
 
-def get_new_or_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, debug=False, parent_classes=None):
+def get_new_or_existing_class_from_text_using_ollama(datapoint, class_list, class_defination, ollama_url, debug=False, parent_classes=None):
     prompt = (
         "Classify a fashion product based on the following product description: {description}. "
         "{parent_classes_prompt}"
@@ -143,27 +143,27 @@ def get_new_or_existing_class_from_text_using_ollama(datapoint, class_list, clas
     
 
     for i in range(5):
-        response = llm_response(prompt)
+        response = llm_response(prompt, ollama_url)
         if debug:
-            print(f"Attempt {i+1}, ({response})")
+            logging.debug(f"Attempt {i+1}, ({response})")
         try:
-            json_obj = lo.get_json_from_response(response)
+            json_obj = utils.get_json_from_response(response)
             break
         except:
             if debug:
-                print("Error in lo.get_json_from_response")
+                logging.debug("Error in lo.get_json_from_response")
             continue
     
     if json_obj['class'] not in class_list:
         if debug:
-            print(f"Invalid class: {json_obj['class']}")
+            logging.debug(f"Invalid class: {json_obj['class']}")
         return True, json_obj['class']
     
     if debug:
-        print(f"Valid class: {json_obj['class']}")
+        logging.debug(f"Valid class: {json_obj['class']}")
     return False, json_obj['class']
 
 
 if __name__ == '__main__':
 
-    print(llm_response("who are you? in short "))
+    logging.debug(llm_response("who are you? in short "))
