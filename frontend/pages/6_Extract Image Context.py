@@ -3,28 +3,9 @@ import time
 import pandas as pd
 import sqlite3
 from backend.feature_extraction_models import call_from_frontend
-import asyncio
-import requests
-import json
-
 
 ingested_csv_path = "backend/data/manual_ingested_data.csv"
 extracted_db_path = "backend/data/extracted_data.db"
-
-def call_extraction_engine_api():
-    return
-    url = 'http://127.0.0.1:5000/api/run-extraction-engine'
-    headers = {'Content-Type': 'application/json'}
-    payload = {
-        'csv_path_in': ingested_csv_path,
-        'db_path_out': extracted_db_path    }
-
-    response = requests.post(url, headers=headers, data=json.dumps(payload))
-
-    if response.status_code == 200:
-        print("Engine running in background successfully")
-    else:
-        print(f"Error: {response.json()}")
 
 def image_context_extraction_page():
     st.title("Image Context Extraction")
@@ -57,8 +38,7 @@ def image_context_extraction_page():
     st.write("----------------")
     if st.button("Extract", key="extract_button", help="Click to start extraction"):
         with st.spinner("Processing..."):
-            call_extraction_engine_api()
-            time.sleep(1)  # Simulate processing time
+            call_from_frontend(csv_path_in=ingested_csv_path, db_path_out=extracted_db_path)
 
         # Read extracted_data.db
         st.write("")
@@ -76,6 +56,5 @@ def image_context_extraction_page():
             conn.close()
 
         st.dataframe(extracted_df)
-        time.sleep(2)  # Check every second
 
 image_context_extraction_page()
