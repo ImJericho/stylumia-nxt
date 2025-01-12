@@ -11,7 +11,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - **Interactive User Interface** for stakeholders and fashion experts.
 - **Social Media Trend Analysis Engine** for identifying emerging styles.
 ![Screenshot 2025-01-05 183105](https://github.com/user-attachments/assets/67852dc5-7c1e-42f1-b32c-426837b64ee2)
-![Screenshot (225)](https://github.com/user-attachments/assets/15bed628-d870-4dba-8828-d0fba96df9e8)
 
 ---
 
@@ -79,8 +78,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - Visualize hierarchical structures of fashion entities.
 - Explore relationships and connections in an interactive panel.
 ![Screenshot (230)](https://github.com/user-attachments/assets/70d80644-09d8-48eb-b372-52df6e5879f2)
-![Screenshot (229)](https://github.com/user-attachments/assets/7618087a-a202-4fcb-aa2a-f89d03a49bc9)
-![Screenshot (228)](https://github.com/user-attachments/assets/94df344b-ef46-4c0c-a1a6-6c2e83007569)
 
 ### 5. **Social Trends Page**:
 - Monitors top celebrity posts on platforms like Instagram.
@@ -162,7 +159,12 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
    ```bash
    pip install -r requirements.txt
    ```
-4. Install our feature extraction models:
+4. Setup Instaloader module 
+   ```bash
+   instaloader --login=instagram_username
+   ```
+   Once you enter the password, Instaloader will create an Instagram session for your ID and the script will run.
+5. Install our feature extraction models:
    ```bash
    ollama run hf.co/ImJericho/model-t2t-stylumia-8bit
    ollama run llama3.2
