@@ -19,6 +19,7 @@ from PIL import Image
 from io import BytesIO
 import os
 import shutil
+from backend import img2txt2txt_engine
 
 # import sys
 
@@ -33,7 +34,7 @@ load_dotenv()
 main_folder = os.path.dirname(os.path.abspath(__file__))
 main_folder = main_folder[:-6]
 frontend_path = main_folder
-backend_path = main_folder[:-8] + "backend\data_ingestion_engine"
+backend_path = main_folder[:-8] + "backend\data"
 
 
 def display_image_from_url(url):
@@ -77,13 +78,14 @@ def social_trends_page():
         csvfile_frontend_path = os.path.join(frontend_path, "ingested_data.csv")
         csvfile_backend_path = os.path.join(backend_path, "ingested_data.csv")
         shutil.move(csvfile_frontend_path, csvfile_backend_path)
+        img2txt2txt_engine()
         st.write("Here are the image URLs and the images:")
         for url in image_urls_list:
             display_image_from_url(url)
             # st.image(url, caption=f"Image from {url}", use_column_width=True)
 
     if st.button("Process Image URLs for Product Description and Style Attributes"):
-        with st.spinner("Data is Pocessing"):
+        with st.spinner("Data is Processing"):
             time.sleep(30)
 
         st.success("Processing Complete !")

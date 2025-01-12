@@ -12,14 +12,19 @@ import plotly.graph_objects as go
 import time
 from streamlit_plotly_events import plotly_events
 import ast
-from dotenv import load_dotenv 
-load_dotenv() 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Page 2: Trend Analysis
 def trend_analysis_page():
     st.title("Trend Analysis")
 
-    uploaded_file = st.file_uploader("Upload CSV file", type="csv")
+    # uploaded_file = st.file_uploader("Upload CSV file", type="csv")
+    uploaded_file = {}
+    if st.button("Retrieve Social Trends Data"):
+        uploaded_file = "pages/ingested_data.csv"
     if uploaded_file:
         # Show progress bar
         progress_bar = st.progress(0)
