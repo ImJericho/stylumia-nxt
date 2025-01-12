@@ -52,11 +52,11 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ### In this Repo:
 
-- **backend**: Contains scripts for running the backend, including models for feature extraction and ontology generation.
-- **frontend**: Hosts the UI for fashion experts to interact with the ontology.
 - **models**: Includes scripts for model training, data processing, and initial ontology generation (training conducted on Kaggle).
 - **neo4j**: Contains scripts for building the graph database on Neo4j AuraDB and creating the ontology.
 - **web-scrapper-engine**: Contains scripts related to web scraping.
+- **backend**: Contains scripts for running the backend, including models for feature extraction and ontology generation.
+- **frontend**: Hosts the UI for fashion experts to interact with the ontology.
 
 ### Online scripts:
 
