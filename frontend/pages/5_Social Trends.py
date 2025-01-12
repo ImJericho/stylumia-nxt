@@ -19,7 +19,8 @@ from PIL import Image
 from io import BytesIO
 import os
 import shutil
-from backend import img2txt2txt_engine
+
+# from backend import img2txt2txt_engine
 
 # import sys
 
@@ -72,13 +73,13 @@ def social_trends_page():
         #     "https://dist.neo4j.com/wp-content/uploads/20210621234221/0EdRw_utw9F-Hd7MW.png",
         # ]
         image_urls_list = all_posts_info()
-        dict = {"post_image_urls": image_urls_list}
+        dict = {"post_image_urls": image_urls_list, "post_text": ""}
         dpf = pd.DataFrame(dict)
         dpf.to_csv("ingested_data.csv")
         csvfile_frontend_path = os.path.join(frontend_path, "ingested_data.csv")
         csvfile_backend_path = os.path.join(backend_path, "ingested_data.csv")
         shutil.move(csvfile_frontend_path, csvfile_backend_path)
-        img2txt2txt_engine()
+        # img2txt2txt_engine()
         st.write("Here are the image URLs and the images:")
         for url in image_urls_list:
             display_image_from_url(url)
@@ -86,11 +87,12 @@ def social_trends_page():
 
     if st.button("Process Image URLs for Product Description and Style Attributes"):
         with st.spinner("Data is Processing"):
-            time.sleep(30)
+            time.sleep(1)
 
         st.success("Processing Complete !")
 
-        df = pd.read_csv("pages/ingested_data.csv")
+        file_path = frontend_path + "\pages\ingested_data.csv"
+        df = pd.read_csv(file_path)
         df = df.iloc[:, :9]
         st.write("Here is the processed data:")
         st.dataframe(df)
