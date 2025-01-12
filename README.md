@@ -120,26 +120,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
-## Why Our Solution Stands Out
-
-### Key Advantages:
-
-- **Scalability**: Handles large datasets with high efficiency.
-- **Adaptability**: Dynamically evolves with trends.
-- **Accuracy**: Ensures precise feature extraction and ontology updates.
-- **Human-in-the-Loop**: Combines AI efficiency with expert oversight.
-
-### Performance Metrics:
-
-- **Model Accuracy**:
-  - Image-to-Text: 92% feature extraction accuracy.
-  - Text-to-Ontology: 95% class matching accuracy.
-- **Database Query Performance**:
-  - Sub-100ms response time for complex queries.
-  - Scales seamlessly to millions of records.
-
----
-
 ## Take a look for yourself [here](https://stylumia-fashion.streamlit.app/)
 
 ---
@@ -147,8 +127,8 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 ## Technologies Used
 
 - **Unsloth**: For fine-tunning the open-source models effentiantly in free tier notebooks.
-- **Ollama**: For using the model in python and usage of transformers lib at the time of fine-tunning
-- **Ngrok**: For connecting the hosted ollama
+- **Ollama**: For using the model in python and usage of transformers lib at the time of fine-tunning.
+- **Ngrok**: For connecting the hosted ollama.
 - **Neo4j**: Graph database for ontology storage and retrieval.
 - **Streamlit**: Intuitive frontend for user interactions.
 - **LLMs**: For feature extraction and trend analysis.
