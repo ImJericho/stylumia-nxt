@@ -98,6 +98,11 @@ workflows = [
         "description": "Identify trending fashion products on social media. Extract and ingest new features into the database.",
         "icon": "📊",
     },
+    {
+        "title": "Data Extractor",
+        "description": "Enrich the database with additional features and relationships using advanced AI models and continuous learning.",
+        "icon": "📈",
+    }
 ]
 
 for workflow in workflows:

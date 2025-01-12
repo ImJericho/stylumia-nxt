@@ -5,7 +5,6 @@ import requests
 import sqlite3
 import re
 import json
-import csv
 import pandas as pd
 import logging
 # logging.basicConfig(level=logging.ERROR)
@@ -32,10 +31,17 @@ def read_csv_file(csv_path):
     return df
 
 #insert rows into the database
-def insert_into_db(db_path, table_name, image_url, image_caption, image_description):
+def insert_into_db(db_path, table_name, image_url, image_caption):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute(f"INSERT INTO {table_name} (image_url, image_caption, image_description) VALUES (?, ?, ?)", (image_url, image_caption, image_description))
+    cursor.execute(f"INSERT INTO {table_name} (image_url, image_caption) VALUES (?, ?)", (image_url, image_caption))
+    conn.commit()
+    conn.close()
+
+def update_db_file_description(db_path, table_name, entity_id, image_description):
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    cursor.execute(f"UPDATE {table_name} SET image_description = ? WHERE entity_id = ?", (image_description, entity_id))
     conn.commit()
     conn.close()
 
@@ -94,7 +100,7 @@ def get_output_text_v2(response):
         return response
     except:
         logging.error("Failed to parse JSON response", exc_info=True)
-        return f"{json.dumps(response)}"
+        return f"{response}"
 
 def get_output_text(response):
     output_text = ""

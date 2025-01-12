@@ -1,7 +1,9 @@
 import requests
 import json
-import classification_models as cls
-import utils
+# import classification_models as cls
+from backend import classification_models as cls
+# import utils
+from backend import utils
 import os
 from dotenv import load_dotenv
 import pandas as pd
@@ -9,11 +11,7 @@ import logging
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def img2txt2txt_engine():
-    csv_path_in = 'backend/data/ingested_data.csv'
-    db_path_out = 'backend/data/extracted_data.db'
-    ontology_path = 'backend/data/ontology.json'
-
+def img2txt2txt_engine(csv_path_in='backend/data/ingested_data.csv', db_path_out='backend/data/extracted_data.db', ontology_path='backend/data/ontology.json'):
     i2t_model_endpoint = os.getenv("OLLAMA_URL")
     t2t_model_endpoint = i2t_model_endpoint
 
@@ -23,16 +21,25 @@ def img2txt2txt_engine():
         logging.info(f"Iteration: {idx}")
         image_url = data['post_image_urls']
         context = data['post_text']
+        utils.insert_into_db(db_path_out, 'extracted_data', image_url, context)
+    logging.info("Done inserting into db")
+
+
+    raw_data = utils.read_db_file(db_path_out, 'extracted_data')
+    for idx, data in enumerate(raw_data):
+        logging.info(f"Iteration: {idx}")
+        entity_id = data[0]
+        image_url = data[1]
+        context = data[2]
         image_description = image2text_model(image_url, i2t_model_endpoint, context)
         logging.info(f"Image Description: {image_description}")
-        utils.insert_into_db(db_path_out, 'extracted_data', image_url, context, image_description)
+        utils.update_db_file_description(db_path_out, 'extracted_data', entity_id, image_description)
     logging.info("Done for image2text_model")
 
     raw_data = utils.read_db_file(db_path_out, 'extracted_data')
     for idx, data in enumerate(raw_data):
         logging.info(f"Iteration: {idx}")
         entity_id = data[0]
-        image_text = data[2]
         image_description = data[3]
         style_attributes = text2text_model(image_description, t2t_model_endpoint)
         # style_attributes = json.loads(style_attributes)
@@ -149,6 +156,15 @@ def text2ontology_model(input_text, ollama_url, ontology_path):
     }
 
     return ontology_dict
+
+
+def call_from_frontend(csv_path_in='backend/data/ingested_data.csv', db_path_out='backend/data/extracted_data.db', ontology_path='backend/data/ontology.json'):
+    if os.path.exists(db_path_out):
+        pass
+    else:
+        utils.create_db_file(db_path_out, 'extracted_data')
+    img2txt2txt_engine(csv_path_in, db_path_out, ontology_path)
+
    
 
 if __name__ == "__main__":
