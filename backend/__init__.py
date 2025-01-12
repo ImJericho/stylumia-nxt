@@ -1,0 +1,1 @@
+from .feature_extraction_models import img2txt2txt_engine
