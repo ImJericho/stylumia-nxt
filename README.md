@@ -14,51 +14,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
-## Technical Implementation Details
-
-### Models and Pipelines
-
-#### 1. **Image-to-Text Model**:
-
-- **Purpose**: Extracts features from product images.
-- **Base Model**: LLaVA-3 as base model (instruction-based extraction).
-- **Workflow**:
-  - **Object Detection**: Identifies the primary product in the image.
-  - **Detailed Analysis**: Extracts attributes and features for the identified product.
-
-#### 2. **Text-to-Text Model**:
-
-- **Purpose**: Processes product descriptions and generates key-value pairs of style attributes in JSON format.
-- **Base Model**: LLaMA 3.2-Instruct-8B fine-tuned using Q-LoRA PEFT.
-- **Optimizations**: Quantized for minimal GPU usage during inference.
-
-#### 3. **Text-to-Ontology Model**:
-
-- **Purpose**: Expands the ontology dynamically or fits data into existing structures.
-- **Phases**:
-  - **Similarity Matching**: Calculates cosine similarity between new data and existing ontology classes.
-  - **Class Generation**: Creates new classes if no match is found, ensuring generic applicability.
-
----
-
-### Ontology Structure / Schema
-
-#### Hierarchy:
-
-1. **Superclass**: Broad categories (e.g., Shoes, Clothing).
-2. **Class**: Subdivisions within a superclass (e.g., Pants, Tops).
-3. **Type**: General physical form (e.g., Jeans, T-Shirts).
-4. **Variant**: Specific variations (e.g., Distressed Jeans).
-5. **Style**: Fine-grained descriptors (e.g., Graphic Print, Embroidered).
-
-#### Features:
-
-- **Adaptive Structure**: Flexible for growth and expansion.
-- **Dynamic Classes**: AI-driven creation of new categories.
-- **Cross-Aware Feature**: Enables cross-category comparisons (e.g., Dhoti vs. Jeans under same "Bottom-wear" inspite of being in different grandparent class).
-
----
-
 ## User Interface
 
 ### 1. **Query Page**:
@@ -86,11 +41,37 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - Monitors top celebrity posts on platforms like Instagram.
 - Extracts features and updates the ontology for statistical assessment.
 
+### 6. **Data Extractor**:
+
+- For manually extracting fashion attribute and generating ontology.
+- Provide image with or without some context and generate features.
+
 ---
 
-## Data Storage and Performance
+## Directories Explanation
 
-### Neo4j AuraDB
+### In this Repo:
+
+- **backend**: Contains scripts for running the backend, including models for feature extraction and ontology generation.
+- **frontend**: Hosts the UI for fashion experts to interact with the ontology.
+- **models**: Includes scripts for model training, data processing, and initial ontology generation (training conducted on Kaggle).
+- **neo4j**: Contains scripts for building the graph database on Neo4j AuraDB and creating the ontology.
+- **web-scrapper-engine**: Contains scripts related to web scraping.
+
+### Online scripts:
+
+- **Data Prepration for Model Fine Tunningtps** : [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-ontology-generation-script)
+- **Model Training**: [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-model-training)
+- **Data Prepration for Model Fine Tunning** : [Jupyter Notebook](https://github.com/ImJericho/stylumia-nxt/blob/main/text_model/data_processing.ipynb)
+
+### Hosted Model and Data:
+
+- **Fine Tunned Model** : [HuggingFace] https://huggingface.co/datasets/ImJericho/Stylumia-nxt-text2text
+- **Processed Dataset** : [HuggingFace] https://huggingface.co/ImJericho/model-t2t-stylumia-8bit
+
+
+---
+## Data Storage(Neo4j AuraDB)
 
 - **Two Databases**:
   - **Ontology Database**: Stores hierarchical structures and relationships.
@@ -120,25 +101,6 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 ---
 
-## Why Our Solution Stands Out
-
-### Key Advantages:
-
-- **Scalability**: Handles large datasets with high efficiency.
-- **Adaptability**: Dynamically evolves with trends.
-- **Accuracy**: Ensures precise feature extraction and ontology updates.
-- **Human-in-the-Loop**: Combines AI efficiency with expert oversight.
-
-### Performance Metrics:
-
-- **Model Accuracy**:
-  - Image-to-Text: 92% feature extraction accuracy.
-  - Text-to-Ontology: 95% class matching accuracy.
-- **Database Query Performance**:
-  - Sub-100ms response time for complex queries.
-  - Scales seamlessly to millions of records.
-
----
 
 ## Take a look for yourself [here](https://stylumia-fashion.streamlit.app/)
 
@@ -148,10 +110,11 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 
 - **Unsloth**: For fine-tunning the open-source models effentiantly in free tier notebooks.
 - **Ollama**: For using the model in python and usage of transformers lib at the time of fine-tunning
-- **Ngrok**: For connecting the hosted ollama
+- **Ngrok**: For connecting the hosted ollama.
+- **Kaggle**: Used kaggle notebooks for all the above mentioned training.
+- **HuggingFace**: To store the dataset and hosting the fine-tuned model.
 - **Neo4j**: Graph database for ontology storage and retrieval.
 - **Streamlit**: Intuitive frontend for user interactions.
-- **LLMs**: For feature extraction and trend analysis.
 - **PyVis**: Visualization of relationships and hierarchies.
 - **Python**: Core programming language for backend and model pipelines.
 
@@ -162,22 +125,22 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 ### Prerequisites:
 
 1. Python 3.9 or higher.
-2. Neo4j AuraDB credentials.
-3. Required Python libraries:
+2. Required Python libraries:
    ```bash
    pip install -r requirements.txt
    ```
-4. Setup Instaloader module
+3. Setup Instaloader module
    ```bash
    instaloader --login=instagram_username
    ```
    Once you enter the password, Instaloader will create an Instagram session for your ID and the script will run.
-5. Install our feature extraction models:
+4. Install our feature extraction models:
    ```bash
-   ollama run hf.co/ImJericho/model-t2t-stylumia-8bit
-   ollama run llama3.2
+   ollama pull hf.co/ImJericho/model-t2t-stylumia-8bit
+   ollama pull llama3.2
+   ollama oull llava:13b / llama3.2-vision
    ```
-6. Install internal folders as modules
+5. Install internal folders as modules
    ```bash
    pip install -e .
    ```
@@ -214,9 +177,3 @@ Our solution is a cutting-edge AI-powered platform designed to revolutionize the
 - **Pranay Pandey** (IIT Dhanbad)
 
 ---
-
-## Our Efforts
-
-- **Data prepration for model fine tunningtps** : [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-ontology-generation-script)
-- **Model-training**: [Kaggle Notebook](https://www.kaggle.com/code/vivecode/stylumia-model-training)
-- **Data prepration for model fine tunning** : [Jupyter Notebook](https://github.com/ImJericho/stylumia-nxt/blob/main/text_model/data_processing.ipynb)
