@@ -17,29 +17,28 @@ def img2txt2txt_engine():
     i2t_model_endpoint = os.getenv("OLLAMA_URL")
     t2t_model_endpoint = i2t_model_endpoint
 
-    # raw_data = utils.read_csv_file(csv_path_in)
     raw_data = pd.read_csv(csv_path_in)
 
-    # for idx, data in raw_data.iterrows():
-    #     logging.info(f"Iteration: {idx}")
-    #     image_url = data['post_image_urls']
-    #     context = data['post_text']
-    #     image_description = image2text_model(image_url, i2t_model_endpoint, context)
-    #     logging.info(f"Image Description: {image_description}")
-    #     utils.insert_into_db(db_path_out, 'extracted_data', image_url, context, image_description)
-    # logging.info("Done for image2text_model")
+    for idx, data in raw_data.iterrows():
+        logging.info(f"Iteration: {idx}")
+        image_url = data['post_image_urls']
+        context = data['post_text']
+        image_description = image2text_model(image_url, i2t_model_endpoint, context)
+        logging.info(f"Image Description: {image_description}")
+        utils.insert_into_db(db_path_out, 'extracted_data', image_url, context, image_description)
+    logging.info("Done for image2text_model")
 
-    # raw_data = utils.read_db_file(db_path_out, 'extracted_data')
-    # for idx, data in enumerate(raw_data):
-    #     logging.info(f"Iteration: {idx}")
-    #     entity_id = data[0]
-    #     image_text = data[2]
-    #     image_description = data[3]
-    #     style_attributes = text2text_model(image_description, t2t_model_endpoint)
-    #     # style_attributes = json.loads(style_attributes)
-    #     logging.info(f"Style Attributes: {style_attributes} {type(style_attributes)}")
-    #     utils.update_db_file_attributes(db_path_out, 'extracted_data', entity_id, style_attributes)
-    # logging.info("Done for text2text_model")
+    raw_data = utils.read_db_file(db_path_out, 'extracted_data')
+    for idx, data in enumerate(raw_data):
+        logging.info(f"Iteration: {idx}")
+        entity_id = data[0]
+        image_text = data[2]
+        image_description = data[3]
+        style_attributes = text2text_model(image_description, t2t_model_endpoint)
+        # style_attributes = json.loads(style_attributes)
+        logging.info(f"Style Attributes: {style_attributes} {type(style_attributes)}")
+        utils.update_db_file_attributes(db_path_out, 'extracted_data', entity_id, style_attributes)
+    logging.info("Done for text2text_model")
 
     raw_data = utils.read_db_file(db_path_out, 'extracted_data')
     for idx, data in enumerate(raw_data):
