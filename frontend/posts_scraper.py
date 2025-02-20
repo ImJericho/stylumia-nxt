@@ -73,7 +73,7 @@ def all_posts_info():
         #             "likes": p["node"]["edge_liked_by"]["count"],
         #         }
         #     )
-        time.sleep(15)
+        time.sleep(3)
     print(posts_image_urls)
     return posts_image_urls
 

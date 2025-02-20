@@ -1,0 +1,18 @@
+2025-02-20 11:02:40,333 - INFO - Loading data
+2025-02-20 11:05:24,314 - ERROR - Error processing row: Brescia 30 in. W x 18 in. D x 36 in. H Bath Vanity In Grey with Vanity Top in White with White Basin and Mirror
+2025-02-20 11:05:24,315 - ERROR - {code: Neo.ClientError.Statement.SyntaxError} {message: Variable `aProduct_Depth_in` already declared (line 41, column 36 (offset: 2202))
+"                            MERGE (aProduct_Depth_in:Product_Depth_in{name: $Product_Depth_in})"
+                                    ^}
+2025-02-20 11:05:31,910 - ERROR - Error processing row: Ravenna 24 in. W Bathroom Vanity in White with Single Basin in White Engineered Marble Top and Mirror
+2025-02-20 11:05:31,911 - ERROR - {code: Neo.ClientError.Statement.SyntaxError} {message: Variable `aProduct_Depth_in` already declared (line 38, column 36 (offset: 1938))
+"                            MERGE (aProduct_Depth_in:Product_Depth_in{name: $Product_Depth_in})"
+                                    ^}
+2025-02-20 11:10:30,278 - INFO - Loading data
+2025-02-20 11:12:02,872 - INFO - Loading data
+2025-02-20 11:16:12,078 - INFO - Loading data
+2025-02-20 11:17:32,083 - INFO - Loading data
+2025-02-20 11:18:20,664 - INFO - Loading data
+2025-02-20 11:19:07,156 - INFO - Loading data
+2025-02-20 11:23:36,183 - INFO - Loading data
+2025-02-20 11:26:11,602 - INFO - Loading data
+2025-02-20 11:28:15,927 - INFO - Loading data

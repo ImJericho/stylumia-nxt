@@ -76,9 +76,9 @@ def social_trends_page():
         dict = {"post_image_urls": image_urls_list, "post_text": ""}
         dpf = pd.DataFrame(dict)
         dpf.to_csv("ingested_data.csv")
-        csvfile_frontend_path = os.path.join(frontend_path, "ingested_data.csv")
-        csvfile_backend_path = os.path.join(backend_path, "ingested_data.csv")
-        shutil.move(csvfile_frontend_path, csvfile_backend_path)
+        # csvfile_frontend_path = os.path.join(frontend_path, "ingested_data.csv")
+        # csvfile_backend_path = os.path.join(backend_path, "ingested_data.csv")
+        # shutil.move(csvfile_frontend_path, csvfile_backend_path)
         # img2txt2txt_engine()
         st.write("Here are the image URLs and the images:")
         for url in image_urls_list:

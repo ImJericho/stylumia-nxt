@@ -1,0 +1,30 @@
+sno,post_image_urls,post_text,Description,Style Attributes ,Superclass,Class,Type,Variant ,Style
+0,https://assets.stylumia.com/originals/2024/11/401/67366e67e01d2ca19fda979eb97c478ccd8c048df8ab42534d5105e67ba78c89.jpg,,"The image features a beautiful young woman wearing a pink and black dress, standing confidently in front of a white background. The dress is a long, flowing garment with a patterned design, making it an elegant and stylish choice for various occasions. The woman's pose and smile suggest that she is comfortable and happy in this outfit, which can be worn to events such as weddings, parties, or formal gatherings. The dress's versatility and attractive design make it a popular choice for women seeking to make a statement and look their best at special occasions.","{
+  ""color"": ""Pink and Black"",
+  ""pattern"": ""Patterned"",
+  ""length"": ""Long"",
+  ""style"": ""Elegant, Stylish"",
+  ""suitability"": ""Formal, Weddings, Parties"",
+  ""fit"": ""Flowing"",
+  ""versatility"": ""High""
+}",Clothing,Dress,Long Dress,Patterned ,"Elegant, Stylish"
+1,https://assets.stylumia.com/originals/2024/11/401/f9e6dc103f1c7d214abad01dd96ac7f5311bc6644242e62fb73e0d16a2ad9d16.jpg,,"The image features a beautiful young woman wearing a flowing red dress with white flowers on it. The dress is long and elegant, perfect for special occasions or formal events. The woman is dancing gracefully, showcasing the dress's movement and flow. This dress is ideal for those who want to make a statement and stand out at parties, weddings, or other formal gatherings. The combination of the rich red color and the delicate white flower pattern adds a touch of sophistication and charm to the overall look. The dress is versatile and can be paired with various accessories and shoes to complete the outfit.","{
+  ""color"": ""Red with White Flowers"",
+  ""pattern"": ""Floral"",
+  ""length"": ""Long"",
+  ""style"": ""Sophisticated, Graceful"",
+  ""suitability"": ""Special Occasions, Weddings, Parties"",
+  ""fit"": ""Flowing"",
+  ""movement"": ""High"",
+  ""charm"": ""High""
+}",Clothing,Dress,Long Dress,Floral ,"Sophisticated, Graceful"
+2,https://assets.stylumia.com/originals/2024/11/198/73baf2381a0bc6b275aa75a8555bfcbd3981ade1a07406438cbc7a8d901a9c07.jpg,,"The image features a beautiful woman wearing a pink sari, which is a traditional Indian garment. The sari is adorned with gold and pink embroidery, making it an elegant and stylish outfit. The sari is paired with a matching pink purse, which adds a touch of sophistication to the overall look. This outfit is perfect for special occasions, such as weddings, cultural events, or formal gatherings. The combination of the sari and purse creates a stunning and graceful appearance, making it an ideal choice for those who want to embrace traditional Indian fashion or add a touch of elegance to their wardrobe.","{
+  ""color"": ""Pink with Gold"",
+  ""pattern"": ""Embroidered"",
+  ""material"": ""Silk or Similar Fabric"",
+  ""style"": ""Traditional, Elegant"",
+  ""accessories"": ""Matching Pink Purse"",
+  ""suitability"": ""Weddings, Cultural Events, Formal Gatherings"",
+  ""sophistication"": ""High"",
+  ""grace"": ""High""
+}",Clothing,Sari,Traditional Sari,Embroidered,"Traditional, Elegant"

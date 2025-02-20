@@ -109,9 +109,9 @@ if __name__ == "__main__":
         json_data = json.load(file)
     # print(json_data)
     conn = Neo4jConnection(
-        uri=os.getenv("NEO4J_URI"),
-        user=os.getenv("NEO4J_USERNAME"),
-        pwd=os.getenv("NEO4J_PASSWORD"),
+        uri=os.getenv("ONT_NEO4J_URI"),
+        user=os.getenv("ONT_NEO4J_USERNAME"),
+        pwd=os.getenv("ONT_NEO4J_PASSWORD"),
     )
     create_relationships_from_json(json_data, conn)
 

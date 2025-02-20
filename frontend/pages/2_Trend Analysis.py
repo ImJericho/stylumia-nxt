@@ -24,7 +24,7 @@ def trend_analysis_page():
     # uploaded_file = st.file_uploader("Upload CSV file", type="csv")
     uploaded_file = {}
     if st.button("Retrieve Social Trends Data"):
-        uploaded_file = "pages/ingested_data.csv"
+        uploaded_file = "frontend/pages/ingested_data.csv"
     if uploaded_file:
         # Show progress bar
         progress_bar = st.progress(0)

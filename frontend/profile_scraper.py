@@ -33,10 +33,21 @@ def extract_instagram_post_urls_for_profile(profile_name, session_username):
 
 
 def profiles_scraper():
-    post_urls_for_all_profiles = []
+    post_urls_for_all_profiles = [
+        "https://www.instagram.com/p/DGQw9PJxNLD/",
+        "https://www.instagram.com/p/DGQIEqJA8dg/",
+        "https://www.instagram.com/p/DGOQEk2N1Er/",
+        "https://www.instagram.com/p/DGRBdFHyaVy/",
+        "https://www.instagram.com/p/DGRFfhBycAo/",
+        "https://www.instagram.com/p/DGQlwEgJwyU/",
+        "https://www.instagram.com/p/DCzGDOxxMua/",
+        "https://www.instagram.com/p/DGOF7Olvv6I/",
+        "https://www.instagram.com/p/DGEzQKStB71/",
+        "https://www.instagram.com/p/DGQg7AVJgat/",
+    ]
     instagram_profile_links = top100()
     print(instagram_profile_links)
-    session_username = "shashvat_sj"
+    session_username = "testingaccount004"
     c = 0
     for profile_name in instagram_profile_links:
         post_urls_for_one_profile = extract_instagram_post_urls_for_profile(
@@ -49,9 +60,9 @@ def profiles_scraper():
             for url in post_urls_for_one_profile:
                 print(url)
             post_urls_for_all_profiles.extend(post_urls_for_one_profile)
-        time.sleep(10)
+        time.sleep(5)
         c += 1
-        if c == 13:
+        if c == 1:
             break
 
     return post_urls_for_all_profiles

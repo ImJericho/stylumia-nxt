@@ -58,7 +58,7 @@ features = [
     "**Query Page**: Explore the database and retrieve products based on specific filters and relationships.",
     "**Trend Analysis Page**: Upload CSV data, extract features using AI models, and update the database.",
     "**Verification Page**: Ensure only verified entities and features are added to the database.",
-    "**Social Trends**: Analyze top social media accounts to identify and ingest trending products into the ontology."
+    "**Social Trends**: Analyze top social media accounts to identify and ingest trending products into the ontology.",
 ]
 
 for feature in features:
@@ -102,7 +102,7 @@ workflows = [
         "title": "Data Extractor",
         "description": "Enrich the database with additional features and relationships using advanced AI models and continuous learning.",
         "icon": "📈",
-    }
+    },
 ]
 
 for workflow in workflows:
@@ -117,19 +117,19 @@ for workflow in workflows:
     )
 
 # Section: Visual Overview
-st.markdown("## 🎨 Visual Overview")
+# st.markdown("## 🎨 Visual Overview")
 
-col1, col2 = st.columns(2)
+# col1, col2 = st.columns(2)
 
-with col1:
-    st.markdown("### Ontology Visualization")
-    image = Image.open("ontology_visualization.png")  # Replace with actual path
-    st.image(image, caption="Interactive Ontology View")
+# with col1:
+#     st.markdown("### Ontology Visualization")
+#     # image = Image.open("ontology_visualization.png")  # Replace with actual path
+#     # st.image(image, caption="Interactive Ontology View")
 
-with col2:
-    st.markdown("### Query Interface")
-    image = Image.open("query_interface.png")  # Replace with actual path
-    st.image(image, caption="Product Query and Relationships")
+# with col2:
+#     st.markdown("### Query Interface")
+#     image = Image.open("query_interface.png")  # Replace with actual path
+#     st.image(image, caption="Product Query and Relationships")
 
 # Section: About
 st.markdown("## ℹ️ About")

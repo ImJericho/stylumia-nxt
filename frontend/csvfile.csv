@@ -1,0 +1,292 @@
+superclass,class,type,variant,style,product_id,product_name
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Loose Fit Dress,08d5952319c2efbb3c078eea151eff3b0b8b5fc3c1916d9bcc45285c7103cb78,One-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Bandeau Dress,Strapless Sleeveless Dress,f5bc58b78036e55c23c6a48b0260b22353f3f17881f2a58ff548ff1e03b428c7,Tulle-skirt bandeau dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Turtleneck Lace Maxi Dress,99f85a4db13b4cad954ca548d864cf9b6bd6c93a3c3da92a9d2e80ea0dae988c,Turtleneck lace maxi dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Asymmetric Maxi Dress,83496e92cca33cf9bc569b4c1b604ee10a1f35d09b7a8b8f414cc7acc57db018,Sheer-skirt maxi dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,68479a42f332bf00daa87a20d5e82a124ce5ea6b225450bc14000c47882f587b,Flared-skirt dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Flared Dress,555c7856f5a24931b254a3c0cf156a491845fa11a82145b5179bc7925f89c32b,Flared-skirt rib-knit mini dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Asymmetric Maxi Dress,46a40f269f304f064ebf4cdb278af9ca322381249bbe2e8ff0b0020058e8d06f,Asymmetric crêpe dress
+Clothing,Casual Wear,Bottom-wear,Bandeau Dress,Strapless Sleeveless Dress,3248f4276dcb3d65f07e85619a8113ae5ef87800d633bfc299f7dcbe7aa74ac8,Denim bandeau dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Bodycon One-Shoulder Dress,342c8304257849e96c66c488cf8c0e50c23c896e7599c2a7117a4572d031dec0,Coated one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Draped One-Shoulder Dress,Bodycon with Draped Elements,0f747be10a2e4190552f42ef7a7840f64533ac8226879b2137d5f54e9a183c80,Draped twill dress
+Clothing,Casual Wear,Bottom-wear,Tiered Maxi Dress,Strapless Sleeveless Dress,052597a7450de72f3e2a178a1a4147c7ed00674815d3180a2c582457457cd139,Tiered dress
+Clothing,Casual Wear,Bottom-wear,Butterfly-sleeved dress,Flared Dress,f39acf8a64ccaf44410050142e9db99661a9ceb4125c8f6252b16b06d23e0026,Butterfly-sleeved dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,d94f0f35f5c3b79739bf9e3c9f0a268b864c101ab657b36f295b212db57ad237,Flared-skirt dress
+Clothing,Casual Wear,Bottom-wear,Sequined bandeau dress,Floral Appliquéd Dress,0127771e57530aa7c07b7b8a609cdba93521f495738e4172c891aff057ba6899,Appliquéd bandeau dress
+Clothing,Casual Wear,Bottom-wear,Balloon-sleeved dress,Balloon-sleeved Dress,071a11f127be28cd3d80b8ed0868773e647e20fb34abb74e1c2667665005a3cb,Balloon-sleeved dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Bodycon One-Shoulder Dress,55df6af26eddb92032ac96ed005ad609c85bd48e1bb77716902193fc5a624149,One-shoulder bodycon dress
+Clothing,Formal Wear,Top-wear,Blazer Dress,Satin Finish,8882958fa6a6300ee58d8477cceb123518ac0d013b85cde763a8c979b383f7ed,Tuxedo blazer dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Strapless Sleeveless Dress,c24708ef270ec8756a7818737a2be4333a153d0cff1f47d611d749ff752abaf5,Strappy midi dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequined Sleeveless Dress,111b1938704f8477c05728e45d8fa4caada1da93537c02a876eb577de1885e03,Sequined bandeau dress
+Clothing,Casual Wear,Bottom-wear,Scalloped Mini Dress,Strapless Sleeveless Dress,8b878af6ea370446b6687f9772d0018e1f7183b7655e6d57059dc7a1a72042ca,Scalloped dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Sheer-skirt maxi dress,6d808a44fb338b6dc113503cadcc0599cedabca20eaeefb8d4ff5ecbc629a223,Flounced maxi dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Cable-knit midi dress,d4b1bfb4f4364838d60b524daecfedb554ddaa77261a0d73341e72aa9d0db1ff,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Sequined Mini Dress,Strapless Sleeveless Dress,6537298190956d53c10d0cbc522040f264ee751ecb7d78d5fe45ffa4303b727c,Rhinestone-embellished mini dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Flared Dress,3a154b4de8efafcf7c92666e5e61aab46231690990673c06a9b03b504ac41de3,Jacquard-weave tie-back dress
+Clothing,Casual Wear,Bottom-wear,Cable-knit Midi Dress,Cable-knit midi dress with long sleeves and dropped shoulders,177727707267894222975167cdf219a7dd65549c5f88b725f543ca3521750de9,Cable-knit midi dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequin-embroidered Mesh Dress,804f5c111779ddc694691525a01e043986f52c8f96f758a208977020bf744e1c,Sequin-embroidered mesh dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,67c8f3699e7a93256650c5f81896ba149f79f7f1c355c6b6fc1b075be8b8df35,Jacquard-weave bandeau dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Flounce-trimmed chiffon dress,074eee64a73fd85f0760c7575556cb704e510b1b4388c5abb58979cc1ab959d1,Flounce-trimmed chiffon dress
+Clothing,Casual Wear,Bottom-wear,Fringed Maxi Dress,Strapless Sleeveless Dress,f8547323857644d2465a3b368760756b789f62a6d97b41eb98bd9f719b0ef5b9,Fringed dress
+Clothing,Casual Wear,Bottom-wear,Sequined Dress,Strapless Sleeveless Dress,a6afaaf05d9892f8f1e1a8b852aed1f2b230dbb67142b539b9a6ddfb6f27e16b,Sequined tie-back dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequined Sleeveless Dress,28d51e8ed9444c7986216c266747d40b1f301dde8a5d84ce86b5e8eaa7c1af28,Sequined deep-back dress
+Clothing,Casual Wear,Bottom-wear,Strappy Dress,Strapless Sleeveless Dress,0831f7df945ebe8b13b9b54dc3671ac0609b2a57058b84eaded06acfb3433e10,Tie-detail strappy dress
+Clothing,Casual Wear,Bottom-wear,Bow-detail dress,Strapless Sleeveless Dress,835de0f0b8510b5825fd8fd03a6923f4821d9cff7f187d31c7238da1d6c9000b,Bow-detail sleeveless dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,b7dcebd36bec18dc443a317cd8651992505713d57b1476af3410c925b8a0cc34,Long-sleeved dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,8f7883b102c0a5b831b0bf7c48da388156de627816732908a78c638fc3784703,Strappy midi dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequined Wrap Dress,8e484de9c94700ef38fa1993fe5a5f15efa8fded98ab49296254caca08ba4e92,Sequined wrap dress
+Clothing,Casual Wear,Bottom-wear,Cable-knit Midi Dress,Cable-knit midi dress with long sleeves and dropped shoulders,e5f86f4544478b1784c603216df6ad9316c36431aadd56e01b02c0546b8ece85,Cable-knit midi dress
+Clothing,Casual Wear,Top-wear,Sweater Dress,Casual Wear,c790eae86b4afd22d0555cf26d5b2c78162f9024d3f97b711b4d3a336e782c6f,Cable-knit dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,89bdf24b6fcdb1ab02778a18877e511365112b2911079890d12d03b5a2326b3a,Jacquard-weave mini dress
+Clothing,Casual Wear,Top-wear,Polo Dress,Slim-fitting Dress,a8e6627bd5e0ca7e9f4160129be8a8d50d53a44f407fe64d04e391682a5b3697,Fine-knit polo dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Sheer-skirt maxi dress,fd38c8228f36528959249ef94382b9b33a83b8012cf95f231c130ea6a7199602,A-line dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Asymmetric One-Shoulder Dress,39dfcf797a6bfc3c49e94e30b8b7e62a4aaf366f75e5a5b34967f230667ae806,Belted one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,40182f98de12fb3d4365a0adfbdcf3f680cae59854bb16dd1ea2034b4e72182b,Puff-sleeved smocked dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Slim Fit Dress,169cbe446d777d444ffafdda9056945f7ec4d74dcdd3cfc39074d651de13d39a,Jacquard-weave dress
+Clothing,Casual Wear,Top-wear,Polo Dress,Slim-fitting Dress,d3e77fc015b83d9c16c5cb04f9bf8bb7262804d9d3a69ad40f9c0067b3624957,Bodycon polo dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Strapless Sleeveless Dress,2cb35025d31dbe3adec16e6a56ad58371a24c9f1ea4a3e13ef16ef27004af8eb,Bubble-hem dress
+Clothing,Casual Wear,Bottom-wear,Sequined Mini Dress,Sequined Sleeveless Dress,3bf43b29bd2ea626e0095d99e7b8476914e24bb62d9ee067c6d344c934e60676,Sequined mini dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Strapless Sleeveless Dress,1721362fba47a8134926bcd75a4d6a126d063ad6bca06f78df4a6d927a0fbd87,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Sequined Dress,Sequined A-line Dress,1232dea4b3ac94b5dc87edebdef2b6052711999a1c15ef48cb1203cb75ad681a,Sequined A-line dress
+Clothing,Casual Wear,Bottom-wear,Ruffle-sleeve dress,Ruffle-trimmed dress,fe3fda5aa62973d7420486659e68714db2d4d363c44c7282fd5d76ca16e7fad0,Ruffle-sleeve satin dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Loose Fit Dress,f41908935378fb6836a65ad1883c4dee6a32ad3bc907bc9f52b14c109648026b,Draped twill dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Flounce-trimmed chiffon dress,554e3fa7b40878dfe13709daa6f9486af63a92d10e939c7a1b290cc44fa3034c,Flounced chiffon dress
+Clothing,Casual Wear,Bottom-wear,Pleated Midi Dress,Balloon-sleeved Dress,76e675478ab64857aeb5f3ea56344808291a7f6122f5389b863ab60c59e2cd16,Pleated chiffon dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,3d0376660fb3479bff15cd84ffbe27fb8b8a0645f556c2794b42216373b14d42,Puff-sleeved smocked dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,b9e9683fa5d08b7ee26e5b37cb5a3906f6a7eeaa63a463fd21508fa235649ce3,Puff-sleeved smocked dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Loose Fit Dress,fbfb7f2e082e12031a7dbc479d5c74f45625d9e556846743f69c8547a816694e,Knitted dress
+Clothing,Casual Wear,Bottom-wear,Bow-detail dress,Strapless Sleeveless Dress,b5a4dab8b59a2acb61ffb727c258699b09ca7fb4907f471742a5bb1767bf9a53,Bow-detail sleeveless dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,ba14cdb28e6181297a3fd776ac8d340250281b0e70743bb87a3d11828bb50a6a,Rib-knit bodycon dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-neck rib-knit dress,8db04374e6caa813d5fc582b90c34715f7e3b50b380ed733c54edf83fe4e655b,Scoop-neck rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Sequined Mini Dress,Sequined Sleeveless Dress,89b3aefa35762ebb296e284f786d7e3aa74a225c8cdb2dcfa514bf45ce553ef5,Sequined net dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Strapless Sleeveless Dress,2f5664f81d3324a4643de655bf782afdc5cd3414f5e87966f8f99b5f715b789d,Embellished dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Fringe-hem mini dress,2874edbbad6a60ef68be460262867980aecb133134fc3b58bc09563ed838eabd,Fringe-hem mini dress
+Clothing,Formal Wear,Top-wear,Blazer Dress,Satin Finish,fe6cf6585a36099220db719acb447539d9b9e0c69c65fc473620f819387d032f,Mini blazer dress
+Clothing,Casual Wear,Bottom-wear,Bow-detail dress,A-line Dress,c2478295b5b04e58ec99d3a5f7e4b358bf1ef1652db1e24082432e20d750f2f5,Bow-front satin mini dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Loose Fit Dress,95541703c5ec626f0da26a37c8c4e85d672e9678ab841062bba8203fbef83514,Crochet-look beach dress
+Clothing,Casual Wear,Bottom-wear,Moss-knit A-line Dress,Cable-knit midi dress,45032b45fc485655c5233f4bb5a3cb6cc86cccb402fd8df240850d1eee243f73,Moss-knit dress
+Clothing,Casual Wear,Top-wear,Bandeau Mini Dress,Slim-fitting Dress,151ff38791bd6da587a010b9055a9927cc52ca2d69a33b08331cc3ad0941aa27,Bandeau mini dress
+Clothing,Casual Wear,Bottom-wear,Puff-Hem Dress,Flared Dress,bf15b7173f934f8075ff5a276a1d8b1e29b6274bd291bbabd3661aabc144d773,Bubble-hem dress
+Clothing,Casual Wear,Bottom-wear,Midi Dress,Slim Fit Dress,961b9474e3b440c38eb6649d603f1306d8d9dc9f06ab5ee499ac5193017ec10f,Fitted jersey dress
+Clothing,Casual Wear,Bottom-wear,Sequined A-line Dress,Sequined A-line Dress,73279b67d596c74090239632b59bcf41996411ec18f313209feeabb4abc3e0db,Sequined A-line dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Mini Dress,Bodycon Sleeveless Dress,4682bc518346782a4ba659705b7aa031dca106244e767292a67b217c871fb9ca,Knitted mini dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequined Sleeveless Dress,0cf5b859693bd65615818baad0bfdbcddf77d8ec648e434430836729fc7c4e07,Sequined deep-back dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Cable-knit midi dress,6637775b6a91f16d7323b9a196106dd433756c4cb610b3b1e545fb30f23f0651,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Slim Fit Dress,5791dee1d27089f81d561d4da8864726384b95662160f016af087b129bae68e9,Jacquard-weave dress
+Clothing,Formal Wear,Top-wear,Strappy Dress,Sequin,b0b461d4a03235f2cdb475b793734504f9605ed4d621a2a648273d7e14426b2a,Tie-detail strappy dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Asymmetric One-Shoulder Dress,adf2e73de9fef123f96ef93ac0d5123c03094e6a301fe6b93e44bf01340788de,Draped one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,8817029885f2efc4e037afa4edb4efc5ad39f5c58118dd37e56795646fac9cf9,Rib-knit bodycon dress
+Clothing,Casual Wear,Bottom-wear,Draped One-Shoulder Dress,Balloon-sleeved Dress,c1d53d7994dfb941f03e7597b4b88922f8ad3047ae6a6d93ad6f364a1743d42a,Draped twill dress
+Clothing,Formal Wear,Top-wear,Blazer Dress,Satin Finish,d7d0d4ab6c28c11a8325507942cf68171172227ed0e02e64571a3a4494dcbc10,Twill blazer dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,d3eaefb5a49177c84988183dd2952ddef7e9bb0a80a1d0d01df6d1a01c6e2790,V-neck dress
+Clothing,Casual Wear,Bottom-wear,Bow-detail dress,Strapless Sleeveless Dress,a61fae16d289717de082333301a8920e84d995c340910dc1baa642a1416e83d5,Jacquard-weave bow-back dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,8526cd422cf59a32c8f502c1c59988278064c4a0bc6d45088e6b563fa61cf38d,V-neck dress
+Clothing,Casual Wear,Bottom-wear,Pleated Midi Dress,Flared Dress,782480f667c07841c8765c83522bcca1c6a8855ee53fd52e50be80302a0d72f8,Pleat-sleeved dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Scoop-neck rib-knit mini dress,454080da378fd46d45b1f331a12dd29fc05ec6edd9ce74426c191174405d4817,Knitted mini dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,c38fe32e6aa0c906963e142dc0007e31f1c91d69b34fd8f8440b96100c332ecc,Flared-skirt twill dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,f6ad562e0b678258af3f28e39f44cec2f6844714695ec7154dbefb4e16400d38,Jersey bodycon mini dress
+Clothing,Casual Wear,Bottom-wear,Sequined A-line Dress,Sheer-skirt maxi dress,4326dc6d3a59bf129e2cf0f1a9525ee16b2139e6cad95a5582608b722f594209,Rhinestone-decorated dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,dd342660a3c327f2798592813906ce5b85567256ace624d08fb21c28432d1b36,Tie-strap midi dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,8de342358d22ae8df6cc2a6ab417d3e633e43e1bd2ff2b63120ed25bf1c68654,Long turtleneck dress
+Clothing,Casual Wear,Top-wear,Polo Dress,Slim-fitting Dress,9a87fb002607f075e248df5afe4cb21cdaff334ff6c81aaf3d142e3051d4cee8,Fine-knit polo dress
+Clothing,Casual Wear,Bottom-wear,Scalloped Mini Dress,Flared Dress,e87c846fe940b0550437c62fc414fd8b464634a22793464fbf724b1d895eeb4b,Scalloped twill dress
+Clothing,Casual Wear,Top-wear,Beach Tunic,Flowing Sleeve Dress,d628f569cbd8e2eee487901db106d0da44d16b5d7964cf574925833d578d7fd4,Beach tunic
+Clothing,Casual Wear,Bottom-wear,Asymmetric Ribbed Dress,Asymmetric Dress,6fa3ac97847b991aca2e11e55b2b448a870b8aaad6619c2e9504597f32076a7d,Ribbed asymmetric dress
+Clothing,Casual Wear,Bottom-wear,Strappy Dress,Strapless Sleeveless Dress,be2f35e3f37c27e86efdf376e573417c1e6cc707fb2db0d1ae4e98b36f8650b9,Bow-detail strappy dress
+Clothing,Casual Wear,Bottom-wear,Flared Chiffon Dress,Flounce-trimmed chiffon dress,4b2d04a20074c9451836b4fe97aae3954c830850e9aba7ed4eaa54777bf31ca3,Frill-trimmed chiffon dress
+Clothing,Formal Wear,Top-wear,Blazer Dress,Sequin,422a4a7efee36adcb1bb9951e5c3b10e301706911fc8859cbe2c4e94bc7811d2,Rhinestone-button blazer dress
+Clothing,Casual Wear,Bottom-wear,Maxi Dress,Turtleneck Dress,16c3983a204dec2f3d0606577c918d688ab093c3baeaf532c380be328d15fafa,Draped turtleneck dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Bodycon One-Shoulder Dress,a7ca1ec8231e06d130e7a0a80a6096bb86939abf6328b322c2a905050cf461af,Draped one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Blazer Dress,Strapless Sleeveless Dress,306ca2fda6df500a2aa2848bd6bd1ef150db3eb99fe61ae835cc71019259232c,Sleeveless blazer dress
+Clothing,Casual Wear,Bottom-wear,Sequined A-line Dress,Strapless Sleeveless Dress,14eb46cbc678641319a46a48d6fe3499863f404933aeeb3dea0b5db1e8498b75,Jacquard-weave mini dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Strapless Sleeveless Dress,88d49687310d9fc527700e88fda00b0e2610f6af785843ec61c4519aebf21f3d,A-line dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Flared Dress,Asymmetric Maxi Dress,03e7d55be4a8d0b92ca1bec15f633163dbc6164ba0c97f108578b4e389489529,Embroidered-motif asymmetric dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Flowing Sleeve Dress,ee963af64be4045feed3d55a1faa3d855da976b2827e65195070f07f2cf951aa,Frill-trimmed chiffon tunic dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,f036d59a0e7c9fcd38f67654fc51d76fcece48f0fa566fed4e436a4717d96725,Button-front strappy dress
+Clothing,Casual Wear,Bottom-wear,Flared Chiffon Dress,Flounce-trimmed chiffon dress,352b3cf3c1adc74b9ffdf608d02bc7b0a7084f8e0b820aa1840383fa77daec14,Long chiffon dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,5ad2db5ea6ee46fa4089414ad50192a8c2c06aaf4a8554d71782c9ab8cc69c77,Flared-skirt dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-neck rib-knit dress,26d4d6190cf0ae216df387d8e66adc7ebe34c9aa02b9a79b58ef1eba4cdf26f9,Rib-knit button-front dress
+Clothing,Casual Wear,Top-wear,Off-the-Shoulder Dress,Off-the-Shoulder Dress,a56a6d15468476d3c6093db39a08a41813fd054e9b25174bc22b72beac2fdf49,Rib-knit off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Dress,Strapless Sleeveless Dress,944c804d9b65243d09a32453b6005fe102478442a2fe0f25c366f2e8b278034a,Button-front dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,b8595e837609f1c22ec3b5d141490a77b07c1e1f9d937fb67967f284ca98d0a4,Turtleneck mini dress
+Clothing,Casual Wear,Top-wear,Bandeau Mini Dress,Slim-fitting Dress,7c691c42743c54a93fdb6ace77fca7b9523e478325c93e63604dd79e33c3d716,Turtleneck mini dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Crêpe Dress,209b2e31af4d17354b03f7c24056a8850e8e0d07093c4f65f8741cd0b8295f6a,Layered crêpe satin dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Flounce-trimmed dress,4e8ec2ee53f410c9d665401f412341e1cb056b878b3f67d2509e832745eb2aee,Frill-trimmed dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sequined Sleeveless Dress,39d99c2ba5f7ebf4aeb71de63e8e563ffd7c2e1ef250e39584d01a169ec5cc29,Sequined mini dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Crêpe Dress,c43fc75a2b5afb0e51b03d61bec943ce4ae39f6367a7de0d74e9b3b231284161,Layered crêpe satin dress
+Clothing,Casual Wear,Bottom-wear,Sequined One-Shoulder Midi Dress,Sequined One-Shoulder Dress,58c9e59872408f3fec5ab87edf645f0f78726439da9b8f4053fb1467e258661b,Sequined one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Wrap Dress,Satin Wrap Dress,1debb8d38bede23db7536f02633b4c5ae49fa689529fdbbecfe17dc29b019fa6,Satin wrap dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-neck rib-knit dress,ca18150741e98d955592829f1354b45d416149290f9a82e4014d9375533c53c1,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Textured-weave Shift Dress,Slim Fit Dress,3ea96a728c7a8495713d4be695f02b9fb9b70b84ef10e34b30eb60837c396a21,Textured-weave dress
+Clothing,Casual Wear,Top-wear,Off-the-Shoulder Dress,Off-the-Shoulder Dress,6a68cf80104afd5c8242b3737d1b77ce01c632eaffa4699f667c23925210abed,Off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Jacquard Dress,Flounce-trimmed dress,50b9ef1c37282333f2ec05bdbed3736c9f92ca1ba30506f06018ec0b06be3cd0,Jacquard-weave dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,c59c00a6ce4effb6fe7055780a7a6ae31fc4dd6cfc4e1a414dbf11b69b28e211,Crinkled jersey dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-neck rib-knit Dress,98bfde7a9587f3013ebcb4e0f04b8e7e1de16de458ea24aecbfcd3b850173f19,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Bodycon Sleeveless Dress,421ed97d9fd05b84500233c5ae89eef73ce83085ac3d66d0ff28efef74fc9259,Crinkled jersey dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,A-line Dress,1e700fe188147bc11033ee308bd87116b484ef37984dc604208f753382f146a3,Bead-embellished dress
+Clothing,Casual Wear,Bottom-wear,Patterned Midi Dress,Asymmetric Dress,094b202a0b97d4090b4d4b9c3b72adcd5b9d72f3d13a11e23b429583119b996b,Patterned tie-belt dress
+Clothing,Casual Wear,Bottom-wear,Maxi Dress,Loose Fit Dress,2eee42ae04841363d5037545bcbd05b2930da5e7004689682a8c0ad72612da3a,Oversized shirt dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Shoulder-Pad Dress,e84e47abab8eb6dddb11c8ccbba905e530466898d81d91ec7100787f51a7e81f,Shoulder-pad dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Slim Fit Dress,c41e08f8e17ea16ed14d341b915894ca8a81da0a9c0835974f462a67330caef9,Fitted jersey dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,74fad05a1b875822ff94ae1d9e52b0762d3aaa7d60e5df724a714aa14bf95683,Draped bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Oversized Dress,61bad12b871f35594b308df274e63eb2e2e0c300d78405cf04dfa58e043ba385,Hooded cotton dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Strapless Sleeveless Dress,f6d4e140420f2e8abc2ac9f0842a6b063dfc2ca80bbb2f2dcc5b3f3ffd56bd64,Button-detail dress
+Clothing,Casual Wear,Bottom-wear,Patterned Midi Dress,Strapless Sleeveless Dress,e70db302bc9b148cecb4e9bf25e88e0d2e8061ed9304d1aa967e5b73e055d80a,Patterned poplin dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,03892fabd5602142ebadae99e32f8c73048c7a72e2a00c7018790e00b14cc37e,Smock-topped dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-Neck Rib-Knit Dress,d2dbf9f65f3e8244cd9b7adb115a687cf79de0b30cb4ac2629703a5e8e121a81,Rib-knit boat-neck dress
+Clothing,Casual Wear,Bottom-wear,Print-motif Dress,Floral Print Dress,3b670381845f62d5b3959393b4f9ac839f5daed9bc607c1a85ff04445b92530d,Print-motif dress
+Clothing,Casual Wear,Bottom-wear,Mini Bodycon Dress,Bodycon Dress,1930ac7407164d3a53803099785f3a0e0829ffa87baac5ed4565b1081404c27d,Turtleneck mini dress
+Clothing,Casual Wear,Bottom-wear,Sequined Mini Dress,Jacquard-weave mini dress,0e23c0e762eef67db7a26116a59ef8a79074d65dc990d21f0265fec05e084c64,Jacquard-weave mini dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Midi Dress,Turtleneck Dress,c84b9311b7bc1d5cfbebeb9a1150e0df9a71fe20c632e4ce5e60c9cf21c0f3b0,Rib-knit turtleneck dress
+Clothing,Casual Wear,Bottom-wear,Flared Voluminous Dress,Loose Fit Voluminous Dress,90491f3250a5d832e8bbc8fd939c07a414927bedcfbd8d008d8aebcf94a014f2,Voluminous tie-belt dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Crêpe Dress,Balloon-sleeved Dress,9cf683c8da20a4aa166522d31999b77b1b4622056f4c2fb8c8e46077113ec471,Tie-belt crêpe dress
+Clothing,Casual Wear,Bottom-wear,Sequined Midi Dress,Sheer-skirt maxi dress,68aaba0354b734fe029ae759ced637091f457c7178e3451b5112a887760b1973,A-line dress
+Clothing,Casual Wear,Top-wear,Scoop-neck Dress,Turtleneck Dress,4b7c2886a77356eefef2568832c37a81cde588d6451581228829d9c0735ce990,Stud-detail turtleneck dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,f39b43734f4800cef8aa4cad47d60acc7f80a76292e3754a8c7cef844e13e2df,V-neck dress
+Clothing,Casual Wear,Bottom-wear,One-Shoulder Dress,Asymmetric One-Shoulder Dress,afb1be0d01c52410f8ab792780778d18704d2d9eeaf5e969a47e0b23c7d7e768,Belted one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Open-Back Crêpe Dress,Open-Back Dress,1eed57c58b83dbb31c26840b41b7a5a97af9e8161d98456f665c0a3684b7419c,Tie-detail open-back dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Midi Dress,Bodycon Sleeveless Dress,24420143cde1f6dfd8b42da83ea85c8fa5ae31aea8ccf1e182c1ebb9c2a3c71f,Mermaid-skirt bodycon dress
+Clothing,Casual Wear,Bottom-wear,Tie-neck Dress,Loose Fit Dress,90c74f1b98e8327bab46c2b68d1483f0303f181a5d155a708509d4534e78449c,Tie-neck dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,66aa013293932829277b79fc857a9f36917fc1ac78242da1331d387adbde78f1,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-Neck Rib-Knit Dress,917802bed8ba3cd5ebd21a2cb4d267f63485a42dfec1667d4efb5113f8a92c83,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,4f5f0f5169c7c292a812465d2e62e7802c59eed3cbcc42ef149e246bf6bb8988,Tiered-skirt jersey dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Flutter-sleeved Dress,c649a1333cf2e45b095367c96281d483b4febccfa7334d2d17672b6656d81b83,Flutter-sleeved A-line dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,49e998ec5de77291730096aa7849b5487afef990e7b8e3d80ce3b0707d117279,Jersey bodycon mini dress
+Clothing,Casual Wear,Bottom-wear,A-line Crêpe Dress,Loose Fit Dress,92a97ad4dfc866830f7d64036383171d99ee3465440d4d7979b694e939184bd3,Frilled-collar dress
+Clothing,Casual Wear,Bottom-wear,Loose-Fit Midi Dress,Loose Fit Voluminous Dress,978f515676e810890a0b92554116bd693a79571d0b0528e71df56651a3d6400f,Knitted V-neck dress
+Clothing,Casual Wear,Bottom-wear,Sequined V-Neck Dress,Metallic Accent Dress,2762aa330e8f82eb9f73c11a07cff0c50c086063d45ada165bf0c982157c681f,Stud-embellished coated dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Crêpe Dress,Loose Fit Voluminous Dress,ed79f8d402a75ed750bbe576040cbcb9c35e63a3597dfac35c8dea6960cc1380,Patterned tie-belt dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,88ad5f7a03350d687290bf15a5524409d70de9154053366fe74db135b0ffd355,Flared dress
+Clothing,Casual Wear,Bottom-wear,Open-Back Crêpe Dress,Strapless Sleeveless Dress,af302af9a37253c182a5cfd0c7617f71babc59bd84c66dbd8c1905dfadb24929,Low-back halterneck dress
+Clothing,Casual Wear,Bottom-wear,Embellished Sleeveless Dress,Strapless Sleeveless Dress,10d79d186367644d1f835c074cd445ec9fe67202a19cefc535e006e080c4cb1a,Embellished sleeveless dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Slim Fit Dress,b055ec5189abf0179e1a44ec08a1ba235eef1bb5f5edba18b9d9160a32d2f7cb,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Flared Dress,a64547304c27812a6dca40a8b5b7c0ac40cdf635b425c8831c547bf568686012,Midi shirt dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Slim-fitting Dress,b9e4c5f2255c923f5f4362ead061694ca0b03c5f08bc88cc96118aef82eac824,Smocked bandeau dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,77810e285e8fb8f26b63d91102c45d0b49bf9d98931378ec890156b6a1a4e9fd,Flared dress
+Clothing,Casual Wear,Bottom-wear,Voluminous Flared Dress,Balloon-sleeved Dress,62482f074968d0353d732686bb9e1011c3e2d75a8542fb2651218db8a6ffcd96,Voluminous tie-belt dress
+Clothing,Casual Wear,Bottom-wear,Cargo Dress,Strapless Sleeveless Dress,1aa0068b4decd962c592b30db466064c75f4278a278846d69ab1a09cbc660ccc,Belted cargo dress
+Clothing,Casual Wear,Bottom-wear,Embellished Sleeveless Dress,Strapless Sleeveless Dress,1e2edbfa82b3008238c9743c319c67a35bfa5180ad6300a18491efb44c72942d,Bow-detail dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,b99774b1dbe7b556fc87a8afde1e0bce40683aca14b3a0e32a8b27df3e6513e5,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,8972f09f273c2f012720ffbe3190b0ba598f464be0a285f6dc85b66b35e282a7,Tie-strap midi dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Strapless Sleeveless Dress,77e7d2cedf1bc5203638ffec6c8677d3aecc8b4191493ebe41a85cd98e32f262,Sleeveless dress
+Clothing,Casual Wear,Bottom-wear,Oversized Dress,Balloon-sleeved Dress,cf588c7ad08b9730a8c8cee0b92b503c6a45d15a5f0c817c95916303344f9738,Oversized shirt dress
+Clothing,Casual Wear,Top-wear,Bodycon Dress,Bodycon Dress,428146feac7bb7b62e276ca7ce3e8aa3d41e8b843d849037592fdc8173fde283,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,c6ef9c43e77c741d74703d3d6358704920491fada66a170a97b88ae6be11d15e,Boat-neck bodycon dress
+Clothing,Casual Wear,Bottom-wear,Tiered Maxi Dress,Flared Dress,842cdc1b892cc6b9bddc81b25dfa3d3e5d88ca904fe8a243a54ff4f94bb8d95f,Tiered-skirt chiffon dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,8758b6d5af153252e0a96d08699d79c3edc9a3537d9c6004eea8a26e3323e6f6,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Balloon-sleeved Dress,54c7d72f0c228f918c6e4ae9b48c46728725f46ab5d47d1dae4bfc5afb645fee,Waisted shirt dress
+Clothing,Casual Wear,Top-wear,Off-the-Shoulder Dress,Off-the-Shoulder Dress,bc3829690d8e053837f3753266b2172a150fa8d8d24eef2be59e3b59f1b918d7,Foldover-edge off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Flared Dress,acd07df82fe1104b1d1ace73cb8a09f1268fe758f1155f18aeef75c3d043a8d0,Flared-skirt rib-knit mini dress
+Clothing,Casual Wear,Bottom-wear,Jacquard Dress,Flared Dress,204d73d55560e665d18c1950943c3d339891685e709cc34c26d801565f72c562,Jacquard-weave tie-back dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,6233cb01383ec81c38d0caac9b0856f37363c2993145bb0a3466ffe9b452eb31,Puff-sleeved flared-skirt dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,d4caa2decf90a8450482aafd3db405e003904149ecb3a590b2114c8aa778b885,Draped bodycon dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,033954559045231aa7426a4e93f4bb5d215d33d90f28d59f0ae39a405e6d2376,Rhinestone-embellished dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Mini Dress,Flared Dress,ce674bbc6df71ebb8ece960c97ed925c5304157c8b861f449315449972cdc8f2,Flared-skirt rib-knit mini dress
+Clothing,Casual Wear,Bottom-wear,Flared Rib-Knit Dress,Rib-Knit Detail Dress,6db5d2c2d602f24eee630431989aff57822117f56cd343094cfd41caa94edca2,Long rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Embellished A-line Dress,Embroidered A-line Dress,6d1466bb2890eb393a550da4c6396e0b5af4383efee6f598201b436d645e4e83,Embellished jersey dress
+Clothing,Casual Wear,Bottom-wear,Draped Bodycon Dress,Bodycon with Draped Elements,e18bac6cd427794ede02411c132cddb0857b5b213c1214fd00271d22b4ff6093,Draped bodycon dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,318605cac8fb7bf5c99f077ff2c059a590ba2c2922c1c3eb7572c2e6f4f01b6d,Puff-sleeved flared-skirt dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Oversized Casual Wear Dress,8a3a18bb42c7e00cadd9583de7d68e86b2540c093abf26c61413d2942f0a24a9,Shoulder-pad T-shirt dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Strapless Sleeveless Dress,97a4208835c4e72a28fec228b82b99c43b044382d446fbd648a2199868f27cef,V-neck maxi dress
+Clothing,Casual Wear,Bottom-wear,Pleated Crêpe Dress,Loose Fit Dress,2482707d20dc437cfd23107dc3f6815c96158ab2e0ecbd14e8d391c70747bee0,Belted shirt dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,27c5ae30763dee3da5d5236916b5cd9f064b05cf81466535fccfea124ed28795,Smock-waisted dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Loose Fit Dress,06bbaff338b329b0ae82eb622c91d8d90aa21c6808bb7e284ab4504c9d8be91b,Belted shirt dress
+Clothing,Casual Wear,Bottom-wear,Shirt Dress,Strapless Sleeveless Dress,fa5196a1325275cb60d6face622c61540e99b16803abe09898f3d6dc07804222,Linen-blend shirt dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,f1417f527363f8d3f1fd65fe2ac1ffd37c41b5ff7f3743e123776c4c316921bb,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,e16ec02eac2c189886876c0d1aacb59c3ce9cce54aa8e3b16ca3ac88ac2c0adf,Flared-skirt dress
+Clothing,Casual Wear,Top-wear,Off-the-Shoulder Dress,Casual Wear Dress,13596eafa14c859278424a86c2cf45dbad4185a6bf1e26749d1535b28a97cf1a,Linen-blend halterneck blazer dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Flared Dress,95ed74db6af009ae52a3124639444ffe2c4b516c5fff5ab7987c7b0b46415411,Square-neck jersey dress
+Clothing,Casual Wear,Bottom-wear,Shirt Dress,Regular Fit Dress,51bacc946070bc1f1b8942081616a2f0bc44fadcfe0b19ebdc10384aeef530e7,Linen-blend shirt dress
+Clothing,Casual Wear,Bottom-wear,Wrap Dress,Casual Wrap Dress,3758f3266edca22a84ead08163a037cfdfa6bd5696d0f88cbac3dff2f66e5006,Jersey wrap dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,135182d6827d41a205df43f308ec44b1cd215278adb00c04f45bbd99bedc1b87,Jersey bodycon dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-Neck Rib-Knit Dress,cb7081f1914686146a584e7c9309cb1a74c94e3b79c4ecabb54cbbe693c20412,Long rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Midi Dress,Bodycon Dress,dedabaa7e4c56b599280b0485bcd5c3056c3113262ab2943c6e695555c26dc1f,Draped bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Rib-Knit Dress,Flared Dress,e0e0da95f623c240e4cf38e28ea13f90597b7c8dadff62916ad275f63a914ffd,Rib-knit dress
+Clothing,Casual Wear,Bottom-wear,Twill Skirt Dress,Slim Fit Dress,a8147aa979ba75f2bc94b6cce0e05f86a985917c445ebdbdef90caec1f74e086,Collared zip-front dress
+Clothing,Casual Wear,Bottom-wear,Balloon-sleeved maxi dress,Balloon-sleeved Dress,8fbfedf056229850bf920672b7ad9e0af9e6967d51560c8ed57c14a5ce252d3b,Balloon-sleeved maxi dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Midi Dress,Bodycon Sleeveless Dress,7c829b1d97d7a0b05831f9c687678ae7677eea4938adec19d730b1d4fabc0fbd,Ribbed tube dress
+Clothing,Casual Wear,Bottom-wear,Maxi Dress,Oversized Maxi Dress,4c6e44bc20eaf93c7f8fad920ebcb3345a8afae8af2202fd17df64e5dd00e8b9,Kaftan dress
+Clothing,Casual Wear,Bottom-wear,Off-the-Shoulder Dress,Cable-knit midi dress,89648996c27d9ef7fb063509b7ad49799d4b34fb83db35cd556dd871b54c891e,Fine-knit collared dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Off-the-Shoulder Dress,Bodycon Off-the-Shoulder Dress,1a009f9a093f3eb242a88d38e0120fd5e314698398d1c564a9115d3bc1cb2665,Off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,53cffe704dac17812eceffaf6a00398ed5d44bd7bbaead18deab9c68dfc6f891,Jersey bodycon dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,A-line Dress,057faa284c389af57fce4fb12f2d3e31bf623c0f778890f63429557524dd8f70,A-line dress
+Clothing,Casual Wear,Bottom-wear,Oversized Dress,Oversized Dress,57caf2affa80f209602d356de9912d8fd98b424cb75376eec6c448b2fafc271b,Oversized shirt dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Crêpe Dress,Regular Fit Dress,5356d6d8313f27c7a01945089aea458a9dc0fd1f98b34405b6291e74512f6537,Smock-detail dress
+Clothing,Casual Wear,Bottom-wear,Off-the-Shoulder Dress,Flared Dress,34e28b70360f296e17af7abe41c4da24571f2e0a1db93a67fd6423bb3f6066b9,Rib-knit off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Belted midi dress,Sleeveless Midi Dress,6863a4527c7af6421f5b07c8e62606ee764efd69fc7922ef9d89335b5b5ea393,Belted midi dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Flared Dress,f3012c5d8f159eb5d6239ad248b1712eb1e6a6821486ceca347e8b03cd7dfa68,Flared-skirt dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Flapped Strap Dress,17fd7ed3cc549865960d0364c8af86a4d997a768c32eae1db4be6f25a8dc28f9,Button-front strappy dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,bd71116de85ede6dc5947385363e5dfe6948a58bf14c1f9f1f9916f123883a45,Flared-skirt strappy dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Sheer-skirt maxi dress,633c86130cec378e73144d74ac2e3acb31b72bb5d993608fdf4321d0645790b0,Sheer rib-knit bodycon dress
+Clothing,Casual Wear,Bottom-wear,Balloon-sleeved dress,Balloon-sleeved Dress,66a0d563dcea80b3809a0213a0cb8b8f6e41ff10a7f6c8d1d6b6710670442326,Balloon-sleeved cotton dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,d0b16b1b299477bfcc8432a4c2173ffabe029830c64f805e7038b4dfe6fe9942,Knitted button-front dress
+Clothing,Casual Wear,Bottom-wear,Oversized Cotton Dress,Oversized Dress,cea0fcec23f8c2a207ca3b4edff176439b54c61530d1c0135cd4eef26222bc4f,Hooded cotton dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Asymmetric One-Shoulder Dress,d6cdd781dd13f47c7c11a4300908d26eb9c7c535708b8992e01877a797f9309d,Asymmetric dress
+Clothing,Casual Wear,Bottom-wear,Casual Jumper Dress,Loose Fit Dress,5ef03825a77ffc66a66d476c34844ad682433640b4d8bfaa470127110dcc4e65,Sweatshirt dress
+Clothing,Casual Wear,Bottom-wear,Oversized Shirt Dress,Baggy Dress,d5f8cc0f7b8252acffc5faac182cee4b962b2512b025fb8c8fe03800902a9655,Oversized shirt dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Strapless Sleeveless Dress,93d24598e63d3c377c1897bbc33596fcf393b4c5a1c27126eabbb47217a7c29c,Jacquard-weave dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Crêpe Dress,Strapless Sleeveless Dress,a22cbcd54540691a334fc55965327d6f8f26d46357b1bf967e7821bbc598888a,Tie-belt denim dress
+Clothing,Casual Wear,Bottom-wear,Flared Maxi Dress,Flared Dress,a7558dcaf953e6124833b27b83671e57895c560e8fc79bb7e6765bd1d86c93f4,Drawstring-detail cotton dress
+Clothing,Casual Wear,Top-wear,Scoop-neck Dress,Flowing Sleeve Dress,d7d59469cf8998c8f0899796258975c4fa2b3225b23a50f42474ddcbb6e5afc4,Belted shirt dress
+Clothing,Casual Wear,Bottom-wear,Smocked Sundress,Flared Dress,17f1694c0678d410af570330d0e77d89967f7a01e1741c6bbe8448a04c9edf08,Smock-detail dress
+Clothing,Casual Wear,Bottom-wear,Flared Voluminous Dress,Floral Print Dress,f3985e13e0b8660d29fe486132f63c6fe1cab0532ac1eb66b2100af890bcef68,Patterned linen dress
+Clothing,Casual Wear,Bottom-wear,Wrap Dress,Wrapover Sleeveless Dress,e4b2b0176e5e09859e0b02da24e5098b3e059480f9dd67964694ca3f96806048,Tie-belt blazer dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Regular Fit Dress,9a38326a02e66b1a5f716f719842a3b267f95381e1984bdb1d77dde987911075,Smock-detail dress
+Clothing,Casual Wear,Bottom-wear,Strappy Maxi Dress,Loose Fit Dress,57fed2c4d720125bcab751a8d65f3e6a873b7fc194b3d0440c63ce67f1261efb,A-line maxi dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Strapless Sleeveless Dress,0ee4614629e58efd78cce7467b5e26be5abb9e51abed5d20a0ddb5ef0a27e29f,Smocked-bodice dress
+Clothing,Casual Wear,Bottom-wear,Flared Off-the-Shoulder Chiffon Dress,Flounce-trimmed chiffon dress,e35f1b2db8dcd776bc298c4d54ec3468a95e9456128bea44b5c3f0eaa6916a29,Flounced chiffon dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,0e07b076642a722d2e8529c1338d39c701e1a2c80cd6a4cdc13fa3f76cb72b48,Cap-sleeved dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Strapless Sleeveless Dress,76e81c14ab606b557b589a7d74bbd0f28d5d2dd819ac55ccfd1620dd88b4b87b,Knitted dress
+Clothing,Casual Wear,Bottom-wear,Flared Midi Dress,Regular Fit Dress,53a5fdef4aa31af880643440d84ee0f65fc32a5b1ce50042031759c775d73a4d,Midi shirt dress
+Clothing,Casual Wear,Bottom-wear,Off-the-Shoulder Dress,Off-the-shoulder Dress,33921ae97e9e30104a809a3939c0ab16ddcd2967c44268d6661c80bc0af154a8,Off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Fringed A-line dress,Sequined Sleeveless Dress,c2fcfb133e16ca835507c82dfb8db5e7aae8bd6f6fcdd0839227d3523e0dbf4f,Fringed A-line dress
+Clothing,Casual Wear,Bottom-wear,Cargo Dress,Cargo Dress,0763e17bc69d24f8741c22ed9cd13a53575fcd962736c2969736e5bf9aa92643,Long cargo dress
+Clothing,Casual Wear,Bottom-wear,Patterned Midi Dress,Strapless Sleeveless Dress,fb56825bf6a5d7667a7975aaa583b26cbe10ab8d6329d92763338c9ae81d4fe8,Patterned linen dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Loose Fit Dress,ff3e278b709843be84f62e8d9cb7d29a585b7ec93be7e54330afba2c3746a8ba,Tunic dress
+Clothing,Casual Wear,Bottom-wear,Flared Off-the-Shoulder Dress,Off-the-shoulder Dress,64193feaf0fac0db21360372c2200fea8c41c89f14f064b1be9f262c3d637149,Smocked off-the-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Balloon-sleeved dress,Flared Dress,57f0fb5b1f0efb57f425efa39743d9d3d1f2bdd152ee599c0834e7486b20463c,Plissé dress
+Clothing,Casual Wear,Bottom-wear,Oversized Dress,Baggy Dress,fc11293281cf2cb1bf96aa16a7f1077a0f4ec6eaa6234fcf04de43666bbb55e1,Hooded cotton dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Slim Fit Dress,104c181d75c9eaa153549e10146134ae79ab17f62e2fc030130d7fb4c8472842,Coated halterneck dress
+Clothing,Casual Wear,Bottom-wear,Circular-skirt dress,Regular Fit Dress,d2d10af6b613774a16bfb4b0a66e469351ce009de113d216195296aa35ec1747,Circular-skirt dress
+Clothing,Casual Wear,Bottom-wear,Balloon-sleeved dress,Flounce-trimmed dress,19d4e5e5ca87ece866f84a71651b30415ca99698db6bc2cd3effe2e32cab0b21,Smocked dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Strapless Sleeveless Dress,01d4a06658146548003a60b681ba852d6fd7b6036662b296775237ffa26dca3c,Tiered-skirt chiffon dress
+Clothing,Casual Wear,Bottom-wear,Embellished Sleeveless Dress,Strapless Sleeveless Dress,61000bf5d24269868b4b8bcf19c1a4cb1c0f795437a0b4488e68d958787f0de3,Bow-detail dress
+Clothing,Casual Wear,Bottom-wear,Maxi Dress,Scoop-Neck Rib-Knit Dress,b7e18a970551e0824c6d1090dc1ad71a8257401429ddfceaba93f8cc65762fa5,Textured jersey maxi dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Asymmetric One-Shoulder Dress,f125cfcff72d8de991ac6a99d317ca27e3528900817356ea2961504ba3d4fb37,Gathered one-shoulder dress
+Clothing,Casual Wear,Top-wear,T-shirt Dress,Slim-fitting Dress,7d200f36a0d7147f72bc374c04310327fe0de70d58ef6e6a4ca89596997dd5b8,T-shirt dress
+Clothing,Casual Wear,Bottom-wear,Sheer-waist Flared Dress,Sheer-skirt maxi dress,80665ff34acda0ec6d03a67562f8273174d2390ff1b878010e409a48a98f379b,Long smock-waisted dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Crêpe Dress,Regular Fit Dress,26e55170b924a638be650ecc5cbd329fa3fae24aeb8391f40aebb34e98ea0993,Tie-belt crêpe dress
+Clothing,Casual Wear,Top-wear,Beach Tunic,Flowing Sleeve Dress,b0ce63b18619ec5c7869656d029befb30dd63fe039493dc87e42fc012d5bcc4b,Viscose tunic dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Strapless Sleeveless Dress,bca4bbc69aea453016b2033eecf1b79852caec4c6ee290d8b7e3314da0a05b37,A-line strappy dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Dress,Regular Fit Dress,d2285a49cdfd98f469c7b67687e1d29d34ed6fb697d734fd619ff5ff783d7743,Tie-belt shirt dress
+Clothing,Casual Wear,Top-wear,Tiered Dress,Casual Wear Dress,039dd3fdf79149580974df42fd692d3299773a6d45fbe9e152a5ed183fbbab0d,Shoulder-pad T-shirt dress
+Clothing,Casual Wear,Bottom-wear,Asymmetric Crêpe Dress,Flounce-trimmed dress,17756b0a7ed563e91caa06897e48e7fd73b8dc86cdbd92f83a0a08c4f4e5a950,Flounce-trimmed dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Rib-Knit Detail Dress,6bc44e75a15f3918ea3b5eed9d4646958a5a010ba24e105d4977a8bef809dfc2,Rib-knit button-front dress
+Clothing,Casual Wear,Bottom-wear,Long bandeau dress,Flared Strapless Dress,f8a03e4de0ec66aa58f03b1a6c65273a02252bbaa7be23330a63fa85b6af49e7,Long bandeau dress
+Clothing,Casual Wear,Bottom-wear,Shirt Dress,Viscose Midi Dress,e549d1a284eb822aa49153ffd475aa86c931680531fbd9de1db9eba973ab2327,Midi shirt dress
+Clothing,Casual Wear,Bottom-wear,Macramé-belt dress variant,Loose Fit Dress,a45359244aa841e6dacfae6fc4cfeba9e9ee85f96b587ee8ae7950211fafc80e,Macramé-belt dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Strapless A-line Dress,647229a8821966bf5b1a6338ba15328a4275a7f9326767355a52ad160e185c4b,A-line strappy dress
+Clothing,Casual Wear,Top-wear,Bodycon Dress,Bodycon Dress,c2f45e7076ddd77980b0e95c10e63ed2e18d10cb0b8885d1450937fecfeb4d10,Overlock-detail bodycon dress
+Clothing,Casual Wear,Bottom-wear,Oversized Tie-Detail Dress,Baggy Dress,7498db11a9b8435f779a5d3e2ff7e271ad8d977528094acf805789dc1999c567,Oversized tie-detail dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Crêpe Dress,Oversized Fit Dress,50d1cbdfc22ce221416ece3cd1d07a3038335c0d4bac015e7db1af4284839686,Oversized tie-belt dress
+Clothing,Casual Wear,Bottom-wear,Flared Dress,Satin Flared Dress,fb0487eb3b988a0cf11a75a5478e91ae5f01605262aa69805bf2deb62bf554f7,Draped dress
+Clothing,Casual Wear,Bottom-wear,A-line dress,Strapless A-line Dress,fe95cb602a09f1386331ce37046fb030a7c83affe480b3650137d1630b3b0908,A-line tie-strap dress
+Clothing,Casual Wear,Top-wear,Bandeau Mini Dress,One-shoulder Style Dress,df4fe3603ef20886907900fd9db641dbe16f4fae23fc65ada5125e0d621ffbf7,Button-detail mini dress
+Clothing,Casual Wear,Bottom-wear,Puff-Sleeved Flared Dress,Flared Dress,dc3b2266ce360a1041168f471a72cf37744733eb416e9216126c767e37567580,Tie-detail puff-sleeved dress
+Clothing,Casual Wear,Bottom-wear,Tie-strapped midi dress,Scoop-Neck Rib-Knit Midi Dress,d9cb2fa2a40031a2fceef192f01a3d0e056b7513682b107116e57f794833aff4,Tie-strap midi dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Dress,8dd2fbad2a56f577ea59dce0d4cc7db6da3d82a5f1ffaab8d0a63d4efd436884,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Flared Chiffon Dress,Flared Dress,4526935e71cc57ade250cf82d6b348b71e5af06ddc249187e05ec0963edca7d5,Tiered-skirt chiffon dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Strapless Sleeveless Dress,2ac01d08428958d86851844eac6c0f4bec352d237a0b8eb3ca477dbeb860d67b,Knitted dress
+Clothing,Casual Wear,Bottom-wear,Draped Bodycon Dress,Asymmetric One-Shoulder Dress,09bab4a96db4781410b4ee0c4191c1b88c50a4053cee1fff1ba37d9731ee2e6b,Gathered one-shoulder dress
+Clothing,Casual Wear,Bottom-wear,Off-the-Shoulder Dress,Off-the-shoulder Dress,58b9b9e784a7ca8f9cf5f432e432cd9388284214f50fdd1689a8e3e4bbd5dedf,Off-the-shoulder dress
+Clothing,Casual Wear,Top-wear,Beach Tunic,Casual Wear Dress,566eb8e1af71608be2af69f8fddd1b73792dfe058c34ca4e04232d2673eaf72d,Crinkled tunic dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,7e306d5d9f42e0f4214acec770d54f71f969c4c0012482a3fb1847143f82927a,Ribbed bodycon dress
+Clothing,Casual Wear,Bottom-wear,Bodycon Dress,Bodycon Sleeveless Dress,16d95cd10277616d93f6386e25828731cf734d135963d7213672f2d6b6bcdd15,2-piece bodycon dress and bolero set
+Clothing,Casual Wear,Top-wear,Tiered Dress,Flowing Sleeve Dress,0598d69260d14ee10f7d361652a3abd2adc73722216351d160409b7b92b572b7,Tie-detail puff-sleeved dress
+Clothing,Casual Wear,Bottom-wear,Draped Midi Dress,Regular Fit Dress,8cb7a9cae16ff96bd06a300735319852a11c083f20cb456d11bc91aa491fdc86,Boat-neck jersey dress
+Clothing,Casual Wear,Bottom-wear,Tie-belt Dress,Flared Dress,fc9da423b23e50dcb4742ac12b2be8ce21fd05362410c48bb5861c04dce273bd,Tie-belt dress
+Clothing,Casual Wear,Top-wear,Beach Tunic,Strappy Midi Dress,decc542bbdc7f60a85df5ae38dd8b5c161c22858fcc0be5cf071acbb14245333,Bead-detail halterneck dress
+Clothing,Casual Wear,Bottom-wear,Flared Mini Dress,Strapless Sleeveless Dress,dd1d8d09e2bd2a50fcbbfbd138ce978f9ea89edb6c93d9ee3b0e168f125d25a4,Broderie anglaise dress
+Clothing,Casual Wear,Bottom-wear,Strappy Midi Dress,Strapless Sleeveless Dress,06356b17903a99fab741bbb21e6448eba9fab158ce121df9a5ea762fc805a4d9,Twist-strap jersey dress
+Clothing,Casual Wear,Bottom-wear,Maxi Dress,Sheer-skirt maxi dress,cec2736093509c8891baf0cba01faa3c339b401f6af8db6fdfed3f0d8f92c743,Kaftan beach dress
+Clothing,Casual Wear,Bottom-wear,Rib-Knit Midi Dress,Scoop-Neck Rib-Knit Dress,be5c89033b6b1df3b5bdd527ea129032893e48ab347a78a8231be262bcad3e5e,Rib-knit dress

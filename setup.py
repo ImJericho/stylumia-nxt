@@ -1,7 +1,5 @@
-from setuptools import setup, find_packages
+import instaloader
 
-setup(
-    name="backend",
-    version="1.0.0",
-    packages=find_packages(),
-)
+L = instaloader.Instaloader()
+L.context.log("Logging out")
+L.logout()
